@@ -118,6 +118,7 @@
         <li class="nav-item dropdown has-arrow new-user-menus">
           <a href="#" class=" nav-link" data-bs-toggle="dropdown">
             <img src="<?= base_url() ?>/template1/assets/img/icons/lesson-icon-05.svg" alt="">
+            <?= user()->username ?>
           </a>
           <div class="dropdown-menu">
             <div class="user-header">
