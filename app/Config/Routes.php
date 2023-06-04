@@ -43,14 +43,17 @@ $routes->get('/admin/create', 'admin::create', ['filter' => 'role:admin']);
 $routes->get('/admin/create/index', 'admin::create', ['filter' => 'role:admin']);
 
 
+
 // Admin/Detail Produk
 // $routes->get('/admin/dtail_produk', 'admin::dtail_produk', ['filter' => 'role:admin']);
 // $routes->get('/admin/dtail_produk/index', 'admin::dtail_produk', ['filter' => 'role:admin']);
 
 
+// ADMIN/Disperindagop
+$routes->get('/disperindagkop', 'Disperindagkop::index', ['filter' => 'role:disperindagkop']);
+$routes->get('/disperindagkop/index', 'Disperindagkop::index', ['filter' => 'role:disperindagkop']);
 
-
-
+// ADMIN/Pengrajin
 $routes->get('/pengrajin', 'Pengrajin::index', ['filter' => 'role:pengrajin']);
 $routes->get('/pengrajin/index', 'Pengrajin::index', ['filter' => 'role:pengrajin']);
 
