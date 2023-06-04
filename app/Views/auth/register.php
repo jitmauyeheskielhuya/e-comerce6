@@ -28,10 +28,9 @@
                 <input class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" type="text" name="username" value="<?= old('username') ?>">
               </div>
               <div class="form-group">
-                <label>Role <span class="login-danger">*</span></label>
+                <label for="username">hak akses <span class="login-danger">*</span></label>
                 <div class="">
                   <select class="form-control" name="role">
-                    <option value=""></option>
                     <option value="admin">Admin</option>
                     <option value="pengrajin">Pengrajin</option>
                     <option value="disperindagkop">Disperindagkop</option>
