@@ -149,16 +149,16 @@
             <!-- admin -->
             <?php if (in_groups("admin")) : ?>
               <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="http://localhost:8080/" class="text-emerald-400 hover:text-emerald-500 bg-none"><i class="fas fa-holly-berry"></i> <span class="">Beranda</span></a>
+                <a href="http://localhost:8080/" class="text-emerald-400 hover:text-emerald-500 bg-none"><i class="fas fa-home"></i> <span class="">Beranda</span></a>
               </li>
               <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="<?= base_url('admin/produk') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none"><i class="fas fa-holly-berry"></i> <span class="">D Kriteria</span></a>
+                <a href="<?= base_url('') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none"><i class="fas fa-holly-berry"></i> <span class="">D Kriteria</span></a>
               </li>
               <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
                 <a href="http://localhost:8080/halamansubkriteria" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-comment-dollar"></i> <span class="">D Subkriteria</span></a>
               </li>
               <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="http://localhost:8080/halaman/akun_baru" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-clipboard-list"></i> <span class="py-5">L Data Akun Baru</span></a>
+                <a href="<?= base_url('/akun') ?>" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-users"></i> <span class="py-5">L Data Akun Baru</span></a>
               </li>
             <?php endif; ?>
 

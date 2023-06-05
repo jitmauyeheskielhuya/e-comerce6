@@ -28,17 +28,6 @@
                 <input class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" type="text" name="username" value="<?= old('username') ?>">
               </div>
               <div class="form-group">
-                <label for="username">hak akses <span class="login-danger">*</span></label>
-                <div class="">
-                  <select class="form-control" name="role">
-                    <option value="admin">Admin</option>
-                    <option value="pengrajin">Pengrajin</option>
-                    <option value="disperindagkop">Disperindagkop</option>
-                    <option value="pelanggan">Pelanggan</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
                 <label><?= lang('Auth.password') ?> <span class="login-danger">*</span></label>
                 <input class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?> pass-input" type="password" name="password" autocomplete="off">
                 <span class="profile-views feather-eye toggle-password"></span>

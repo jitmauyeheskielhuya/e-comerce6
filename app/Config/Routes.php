@@ -35,6 +35,9 @@ $routes->set404Override();
 $routes->get('/admin', 'admin::index', ['filter' => 'role:admin']);
 $routes->get('/admin/index', 'admin::index', ['filter' => 'role:admin']);
 
+// admin/laporan akun baru
+$routes->get('/akun', 'User::akun_baru');
+
 // Admin/Produk
 $routes->get('/admin/produk', 'admin::produk', ['filter' => 'role:admin']);
 $routes->get('/admin/produk/index', 'admin::produk', ['filter' => 'role:admin']);

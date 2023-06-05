@@ -15,4 +15,17 @@ class User extends BaseController
     }
     return  'user/index';
   }
+
+  public function __construct()
+  {
+  }
+
+  public function akun_baru()
+  {
+    $data = [
+      "result" => []
+    ];
+
+    return view('admin/akun_baru/index', $data);
+  }
 }
