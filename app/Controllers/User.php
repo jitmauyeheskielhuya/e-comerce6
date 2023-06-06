@@ -12,6 +12,8 @@ class User extends BaseController
       return redirect('pengrajin');
     } elseif ((in_groups("disperindagkop"))) {
       return redirect('disperindagkop');
+    } elseif ((in_groups("pelanggan"))) {
+      return redirect('pelanggan');
     }
     return  'user/index';
   }

@@ -6,7 +6,7 @@
     <div class="container">
       <div class="loginbox">
         <div class="login-left">
-          <img class="img-fluid" src="<?= base_url(); ?>/template1/assets/img/login.png" alt="Logo">
+          <img class="img-fluid pb-14" src="<?= base_url(); ?>/template1/assets/img/k2.png" alt="Logo">
         </div>
         <div class="login-right">
           <div class="login-right-wrap">

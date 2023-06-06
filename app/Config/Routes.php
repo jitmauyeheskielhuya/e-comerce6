@@ -92,8 +92,8 @@ $routes->get('/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter
 $routes->get('/laporan_transaksi/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
 
 // Pelanggan/Dasboard Pelanggan
-$routes->get('/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
-$routes->get('/laporan_transaksi/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
+$routes->get('/pelanggan', 'Pelanggan::index', ['filter' => 'role:pelanggan']);
+$routes->get('/pelanggan/index', 'Pelanggan::index', ['filter' => 'role:pelanggan']);
 
 
 
