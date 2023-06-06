@@ -9,13 +9,18 @@ class Admin extends BaseController
     return view('admin/home_admin');
   }
 
-  public function produk()
+  public function kriteria()
   {
-    return view('admin/produk/index');
+    return view('admin/kriteria/index');
   }
 
   public function create()
   {
-    return view('admin/produk/create');
+    return view('admin/kriteria/create');
+  }
+
+  public function subkriteria()
+  {
+    return view('admin/subkriteria/index');
   }
 }

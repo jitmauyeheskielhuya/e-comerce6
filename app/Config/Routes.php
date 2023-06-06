@@ -32,33 +32,70 @@ $routes->set404Override();
 
 
 // ADMIN/Dashboard
-$routes->get('/admin', 'admin::index', ['filter' => 'role:admin']);
-$routes->get('/admin/index', 'admin::index', ['filter' => 'role:admin']);
+$routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);
+$routes->get('/admin/index', 'Admin::index', ['filter' => 'role:admin']);
 
 // admin/laporan akun baru
-$routes->get('/akun', 'User::akun_baru');
+$routes->get('/akun', 'Akun::akun_baru');
 
-// Admin/Produk
-$routes->get('/admin/produk', 'admin::produk', ['filter' => 'role:admin']);
-$routes->get('/admin/produk/index', 'admin::produk', ['filter' => 'role:admin']);
+// Admin/Data Kriteria
+$routes->get('/kriteria', 'Admin::kriteria', ['filter' => 'role:admin']);
+$routes->get('/kriteria/kriteria', 'Admin::kriteria', ['filter' => 'role:admin']);
 
-$routes->get('/admin/create', 'admin::create', ['filter' => 'role:admin']);
-$routes->get('/admin/create/index', 'admin::create', ['filter' => 'role:admin']);
+$routes->get('/admin/create', 'Admin::create', ['filter' => 'role:admin']);
+$routes->get('/admin/create/create', 'Admin::create', ['filter' => 'role:admin']);
 
-
-
-// Admin/Detail Produk
-// $routes->get('/admin/dtail_produk', 'admin::dtail_produk', ['filter' => 'role:admin']);
-// $routes->get('/admin/dtail_produk/index', 'admin::dtail_produk', ['filter' => 'role:admin']);
+// Admin/Data Subkriteria
+$routes->get('/subkriteria', 'Admin::subkriteria', ['filter' => 'role:admin']);
+$routes->get('/subkriteria/subkriteria', 'Admin::subkriteria', ['filter' => 'role:admin']);
 
 
-// ADMIN/Disperindagop
+// Pengrajin/Dashboard
+$routes->get('/pengrajin', 'Pengrajin::index', ['filter' => 'role:pengrajin']);
+$routes->get('/pengrajin/index', 'Pengrajin::index', ['filter' => 'role:pengrajin']);
+
+// Pengrajin/Data Produk
+$routes->get('/produk', 'Pengrajin::produk', ['filter' => 'role:pengrajin']);
+$routes->get('/produk/produk', 'Pengrajin::produk', ['filter' => 'role:pengrajin']);
+
+// Pengrajin/Data Detail Produk
+$routes->get('/detail_produk', 'Pengrajin::detail_produk', ['filter' => 'role:pengrajin']);
+$routes->get('/detail_produk/detail_produk', 'Pengrajin::detail_produk', ['filter' => 'role:pengrajin']);
+
+// Pengrajin/Data Pemesanan Produk
+$routes->get('/pemesanan_produk', 'Pengrajin::pemesanan_produk', ['filter' => 'role:pengrajin']);
+$routes->get('/pemesanan_produk/pemesanan_produk', 'Pengrajin::pemesanan_produk', ['filter' => 'role:pengrajin']);
+
+// Pengrajin/Data Perkembangan IKM
+$routes->get('/perkembangan_ikm', 'Pengrajin::perkembangan_ikm', ['filter' => 'role:pengrajin']);
+$routes->get('/perkembangan_ikm/perkembangan_ikm', 'Pengrajin::perkembangan_ikm', ['filter' => 'role:pengrajin']);
+
+
+// Disperindagop/Dashboard
 $routes->get('/disperindagkop', 'Disperindagkop::index', ['filter' => 'role:disperindagkop']);
 $routes->get('/disperindagkop/index', 'Disperindagkop::index', ['filter' => 'role:disperindagkop']);
 
-// ADMIN/Pengrajin
-$routes->get('/pengrajin', 'Pengrajin::index', ['filter' => 'role:pengrajin']);
-$routes->get('/pengrajin/index', 'Pengrajin::index', ['filter' => 'role:pengrajin']);
+// Disperindagop/Laporan Data Produk
+$routes->get('/laporan_produk', 'Disperindagkop::laporan_produk', ['filter' => 'role:disperindagkop']);
+$routes->get('/laporan_produk/laporan_produk', 'Disperindagkop::laporan_produk', ['filter' => 'role:disperindagkop']);
+
+// Disperindagop/Laporan Data IKM
+$routes->get('/laporan_ikm', 'Disperindagkop::laporan_ikm', ['filter' => 'role:disperindagkop']);
+$routes->get('/laporan_ikm/laporan_ikm', 'Disperindagkop::laporan_ikm', ['filter' => 'role:disperindagkop']);
+
+// Disperindagop/Laporan Perkembangan IKM
+$routes->get('/laporan_P_ikm', 'Disperindagkop::laporan_P_ikm', ['filter' => 'role:disperindagkop']);
+$routes->get('/laporan_P_ikm/laporan_P_ikm', 'Disperindagkop::laporan_P_ikm', ['filter' => 'role:disperindagkop']);
+
+// Disperindagop/Laporan Perkembangan IKM
+$routes->get('/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
+$routes->get('/laporan_transaksi/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
+
+// Pelanggan/Dasboard Pelanggan
+$routes->get('/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
+$routes->get('/laporan_transaksi/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
+
+
 
 $routes->get('/', 'user::index');
 /*
