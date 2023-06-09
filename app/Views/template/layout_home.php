@@ -116,10 +116,10 @@
         </li>
 
         <li class="nav-item dropdown has-arrow new-user-menus">
-          <a href="#" class=" nav-link" data-bs-toggle="dropdown">
+          <div href="#" class=" nav-link" data-bs-toggle="dropdown">
             <img src="<?= base_url() ?>/template1/assets/img/icons/lesson-icon-05.svg" alt="">
             <?= user()->username ?>
-          </a>
+          </div>
           <div class="dropdown-menu">
             <div class="user-header">
               <div class="avatar avatar-sm">
@@ -190,7 +190,7 @@
                 <a href="<?= base_url('/laporan_produk') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none"><i class="fas fa-holly-berry"></i> <span class="">L Data Produk</span></a>
               </li>
               <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="<?= base_url('/laporan_ikm') ?>" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-comment-dollar"></i> <span class="">L D Data IKM</span></a>
+                <a href="<?= base_url('/laporan_ikm') ?>" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-comment-dollar"></i> <span class="">L Data IKM</span></a>
               </li>
               <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
                 <a href="<?= base_url('/laporan_P_ikm') ?>" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-clipboard-list"></i> <span class="py-5">L Perkrmbangan IKM</span></a>

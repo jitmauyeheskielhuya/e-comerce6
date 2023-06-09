@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Comerce Noken Papua</title>
-  <link href="<?= base_url() ?>/template2/dist/css/final.css" rel="stylesheet">
-  <link rel="shortcut icon" href="<?= base_url() ?>/template1/assets/img/k2.png">
+  <title>Portfolio Tailwind CSS</title>
+  <link href="<?= base_url('template2') ?>/dist/css/final.css" rel="stylesheet">
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
         '(prefers-color-scheme: dark)').matches)) {
@@ -25,7 +24,7 @@
     <div class="container">
       <div class="flex items-center justify-between relative">
         <div class="px-4">
-          <a href="#home" class="font-bold text-lg text-primary block py-6">YeheskielJitmau</a>
+          <a href="#home" class="font-bold text-lg text-primary block py-6">E-Commerce Noken Papua</a>
         </div>
         <div class="flex items-center px-4">
           <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
@@ -41,19 +40,36 @@
                 <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
               </li>
               <li class="group">
-                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Saya</a>
+                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Info SMART</a>
               </li>
               <li class="group">
-                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
+                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Bukti Pemesanan</a>
               </li>
               <li class="group">
-                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Clients</a>
+                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Konfirmasi</a>
               </li>
               <li class="group">
-                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
+                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">keranjang</a>
               </li>
               <li class="group">
-                <a href="<?= base_url('/logout'); ?>" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">logout</a>
+                <div class="relative inline-block text-left">
+                  <div>
+                    <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="dropdown-menu-button" aria-expanded="true" aria-haspopup="true">
+                      Pilih Opsi
+                      <!-- Icon dropdown -->
+                      <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M6 6l4 4 4-4H6z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-menu-button" tabindex="-1">
+                    <div class="py-1" role="none">
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-400 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-1">Profil</a>
+                      <a href="<?= base_url('/logout'); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-2">Logout</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-3">Opsi 3</a>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="flex items-center pl-8 mt-3 lg:mt-0">
                 <div class="flex">
@@ -96,7 +112,7 @@
         </div>
         <div class="w-full self-end px-4 lg:w-1/2">
           <div class="relative mt-10 lg:mt-0 lg:right-0">
-            <img src="<?= base_url() ?>/template2/dist/img/ekel.png" alt="ekel" class="max-w-full mx-auto relative z-10">
+            <img src="<?= base_url('template2') ?>/dist/img/ekel.png" alt="ekel" class="max-w-full mx-auto relative z-10">
             <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-110">
               <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#06b6d4" d="M57.1,-33.9C70,-10.8,73.5,16.8,62.4,27.7C51.3,38.5,25.7,32.5,-0.6,32.8C-26.8,33.2,-53.6,39.8,-65.2,28.6C-76.9,17.5,-73.4,-11.4,-60,-34.9C-46.6,-58.3,-23.3,-76.3,-0.6,-76C22.2,-75.6,44.3,-57,57.1,-33.9Z" transform="translate(100 100) scale(1.0)" />
@@ -192,7 +208,7 @@
       <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
         <div class="mb-12 p-4 md:w-1/2">
           <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-500">
-            <img src="<?= base_url() ?>/template2/dist/img/portfolio/4.jpg" alt="portfolio botstrap5" width="w-full">
+            <img src="<?= base_url('template2') ?>/dist/img/portfolio/4.jpg" alt="portfolio botstrap5" width="w-full">
           </div>
           <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Portfolio Botstrap 5 Yeheskiel Jitmau
           </h3>
@@ -202,7 +218,7 @@
         </div>
         <div class="mb-12 p-4 md:w-1/2">
           <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-500">
-            <img src="<?= base_url() ?>/template2/dist/img/portfolio/6.jpg" alt="belajar tailwindcss" width="w-full">
+            <img src="<?= base_url('template2') ?>/dist/img/portfolio/6.jpg" alt="belajar tailwindcss" width="w-full">
           </div>
           <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Belajar Tailwindcss Yeheskiel Jitmau
           </h3>
@@ -212,7 +228,7 @@
         </div>
         <div class="mb-12 p-4 md:w-1/2">
           <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-500">
-            <img src="<?= base_url() ?>/template2/dist/img/portfolio/5.jpg" alt="css project" width="w-full">
+            <img src="<?= base_url('template2') ?>/dist/img/portfolio/5.jpg" alt="css project" width="w-full">
           </div>
           <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">CSS Project Yeheskiel Jitmau</h3>
           <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -221,7 +237,7 @@
         </div>
         <div class="mb-12 p-4 md:w-1/2">
           <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-500">
-            <img src="<?= base_url() ?>/template2/dist/img/portfolio/2.jpg" alt="portfolio sederhana" width="w-full">
+            <img src="<?= base_url('template2') ?>/dist/img/portfolio/2.jpg" alt="portfolio sederhana" width="w-full">
           </div>
           <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Portfolio Sederhana Yeheskiel Jitmau
           </h3>
@@ -231,7 +247,7 @@
         </div>
         <div class="mb-12 p-4 md:w-1/2">
           <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-500">
-            <img src="<?= base_url() ?>/template2/dist/img/portfolio/3.jpg" alt="portfolio sederhana" width="w-full">
+            <img src="<?= base_url('template2') ?>/dist/img/portfolio/3.jpg" alt="portfolio sederhana" width="w-full">
           </div>
           <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Portfolio Sederhana Yeheskiel Jitmau
           </h3>
@@ -241,7 +257,7 @@
         </div>
         <div class="mb-12 p-4 md:w-1/2">
           <div class="rounded-md shadow-md overflow-hidden dark:shadow-slate-500">
-            <img src="<?= base_url() ?>/template2/dist/img/portfolio/1.jpg" alt="css project" width="w-full">
+            <img src="<?= base_url('template2') ?>/dist/img/portfolio/1.jpg" alt="css project" width="w-full">
           </div>
           <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">CSS Project Gagal Yeheskiel Jitmau</h3>
           <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -271,16 +287,16 @@
       <div class="w-full px-4">
         <div class="flex flex-wrap items-center justify-center">
           <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-            <img src="<?= base_url() ?>/template2/./dist/img/clients/Google_2015_logo.svg.png" alt="google">
+            <img src="<?= base_url('template2') ?>/./dist/img/clients/Google_2015_logo.svg.png" alt="google">
           </a>
           <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-            <img src="<?= base_url() ?>/template2/./dist/img/clients/Gojek_logo_2019.svg.png" alt="goojek">
+            <img src="<?= base_url('template2') ?>/./dist/img/clients/Gojek_logo_2019.svg.png" alt="goojek">
           </a>
           <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-            <img src="<?= base_url() ?>/template2/./dist/img/clients/Tokopedia.svg.png" alt="tokopedia">
+            <img src="<?= base_url('template2') ?>/./dist/img/clients/Tokopedia.svg.png" alt="tokopedia">
           </a>
           <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-            <img src="<?= base_url() ?>/template2/./dist/img/clients/traveloka_logo.png" alt="traveloka">
+            <img src="<?= base_url('template2') ?>/./dist/img/clients/traveloka_logo.png" alt="traveloka">
           </a>
         </div>
       </div>
@@ -505,7 +521,7 @@
   <!-- back to top end -->
 
 
-  <script src="<?= base_url() ?>/template2/dist/js/script.js"></script>
+  <script src="<?= base_url('template2') ?>/dist/js/script.js"></script>
 
 </body>
 
