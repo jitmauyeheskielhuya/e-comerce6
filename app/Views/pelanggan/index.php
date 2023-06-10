@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Tailwind CSS</title>
+  <link rel="stylesheet" href="<?= base_url() ?>/css/app.css">
   <link href="<?= base_url('template2') ?>/dist/css/final.css" rel="stylesheet">
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
@@ -51,10 +52,10 @@
               <li class="group">
                 <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">keranjang</a>
               </li>
-              <li class="group">
-                <div class="relative inline-block text-left">
+              <li class="group relative flex justify-center items-center gap-5">
+                <div class="relative group inline-block text-left">
                   <div>
-                    <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="dropdown-menu-button" aria-expanded="true" aria-haspopup="true">
+                    <button type="button" class="inline-flex group justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="dropdown-menu-button" aria-expanded="true" aria-haspopup="true">
                       Pilih Opsi
                       <!-- Icon dropdown -->
                       <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -62,10 +63,10 @@
                       </svg>
                     </button>
                   </div>
-                  <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-menu-button" tabindex="-1">
+                  <div class="origin-top-right group-focus:block hidden absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-menu-button" tabindex="-1">
                     <div class="py-1" role="none">
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-400 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-1">Profil</a>
-                      <a href="<?= base_url('/logout'); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-2">Logout</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-1">Opsi 1</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-2">Opsi 2</a>
                       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-3">Opsi 3</a>
                     </div>
                   </div>

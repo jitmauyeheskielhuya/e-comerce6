@@ -7,6 +7,7 @@
   <title>E-Comerce Noken Papua</title>
   <link rel="stylesheet" href="<?= base_url() ?>/css/app.css">
   <link rel="shortcut icon" href="<?= base_url() ?>/template1/assets/img/k2.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/plugins/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/plugins/feather/feather.css">
@@ -116,10 +117,10 @@
         </li>
 
         <li class="nav-item dropdown has-arrow new-user-menus">
-          <div href="#" class=" nav-link" data-bs-toggle="dropdown">
+          <a href="#" class=" nav-link" data-bs-toggle="dropdown">
             <img src="<?= base_url() ?>/template1/assets/img/icons/lesson-icon-05.svg" alt="">
             <?= user()->username ?>
-          </div>
+          </a>
           <div class="dropdown-menu">
             <div class="user-header">
               <div class="avatar avatar-sm">
@@ -142,7 +143,7 @@
 
 
     <div class="sidebar" id="sidebar">
-      <div class="sidebar-inner slimscroll sidebar-menu">
+      <div class="sidebar-inner slimscroll sidebar-menu bg-slate-200">
         <div id="sidebar-menu" class="text-lg">
           <ul class="">
 

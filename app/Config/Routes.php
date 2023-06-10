@@ -40,7 +40,7 @@ $routes->get('/akun', 'Akun::akun_baru');
 
 // Admin/Data Kriteria
 $routes->get('/kriteria', 'Admin::kriteria', ['filter' => 'role:admin']);
-$routes->get('/kriteria/kriteria', 'Admin::kriteria', ['filter' => 'role:admin']);
+$routes->get('/kriteria/index', 'Admin::kriteria', ['filter' => 'role:admin']);
 
 $routes->get('/admin/create', 'Admin::create', ['filter' => 'role:admin']);
 $routes->get('/admin/create/create', 'Admin::create', ['filter' => 'role:admin']);

@@ -32,7 +32,7 @@
                         <td><?= $value['email']; ?></td>
                         <td><?= $value['username']; ?></td>
                         <td><?= $value['group_name']; ?></td>
-                        <td></td>
+                        <td>ksbd</td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
