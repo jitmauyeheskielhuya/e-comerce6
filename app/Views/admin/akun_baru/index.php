@@ -5,41 +5,34 @@
   <div class="content container-fluid">
     <h4 class="text-emerald-400 pb-3">Data Akun Baru</h4>
     <div class="content container-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="card">
-
-            <div class="card-body bg-stone-300 rounded-md shadow-md">
-              <h5 class="card-title mb-2">Tabel Akun</h5>
-              <p class="card-text">
-              </p>
-              <div class="table-responsive">
-                <table class="datatable table table-stripped">
-                  <thead class="bg-stone-400">
-                    <tr>
-                      <th>No</th>
-                      <th>Email</th>
-                      <th>Username</th>
-                      <th>Role/Group</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php $no = 1;
-                    foreach ($result as $value) : ?>
-                      <tr>
-                        <td><?= $no++; ?></td>
-                        <td><?= $value['email']; ?></td>
-                        <td><?= $value['username']; ?></td>
-                        <td><?= $value['group_name']; ?></td>
-                        <td>ksbd</td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+      <div class="row pt-4 pb-4 rounded-md bg-slate-200">
+        <div class="col">
+          <p class="text-lg font-bold">Tabel Data Subkriteria</p>
+          <table class="w-full border border-slate-900 mt-4 text-center">
+            <thead>
+              <tr class="bg-emerald-200">
+                <th class="py-2 px-4 border-b">No</th>
+                <th class="py-2 px-4 border-b">Email</th>
+                <th class="py-2 px-4 border-b">Username</th>
+                <th class="py-2 px-4 border-b">Role/Group</th>
+                <th class="py-2 px-4 border-b">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $no = 1;
+              foreach ($result as $value) : ?>
+                <tr class="bg-emerald-100">
+                  <td class="py-3 px-4 border-b"><?= $no++; ?></td>
+                  <td class="py-3 px-4 border-b"><?= $value['email']; ?></td>
+                  <td class="py-3 px-4 border-b"><?= $value['username']; ?></td>
+                  <td class="py-3 px-4 border-b"><?= $value['group_name']; ?></td>
+                  <td class="py-3 px-4 border-b">
+                    <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-2 text-white"><i class="fa fa-eye"></i></a>
+                  </td>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

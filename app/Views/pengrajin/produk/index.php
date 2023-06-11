@@ -4,50 +4,38 @@
 <div class="page-wrapper">
   <div class="content container-fluid">
     <h4 class="text-emerald-400 pb-3">Halaman Data Produk</h4>
-    <div class="content container-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="card">
-
-            <div class="card-body bg-stone-300 rounded-md shadow-md">
-              <h5 class="card-title mb-2">Tabel Produk</h5>
-              <a href="" class="bg-emerald-300 rounded-md shadow-md text-black text-base px-2 py-2 hover:bg-emerald-200"><b>Tambah Produk</b></a>
-              <p class="card-text">
-              </p>
-              <div class="table-responsive">
-                <table class="datatable table table-stripped">
-                  <thead class="bg-stone-400">
-                    <tr>
-                      <th>No</th>
-                      <th>Harga noken</th>
-                      <th>ukuran Noken</th>
-                      <th>motif Noken</th>
-                      <th>Jenis Noken</th>
-                      <th>Nama Pengrajin</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php $no = 1; ?>
-                    <tr>
-                      <td><?= $no++; ?></td>
-                      <td>dzdxgf</td>
-                      <td>benang kulit</td>
-                      <td>jcdkj</td>
-                      <td>ldsncklns</td>
-                      <td>dfbfbgl</td>
-                      <td>
-                        <a href="" class="bg-cyan-500 px-2 py-2 rounded-md text-black mr-3 shadow-md"><i class="fa fa-eye text-black mr-2"></i>Detail Produk</a>
-                        <a href="" class="bg-cyan-500 px-2 py-2 rounded-md text-black mr-3 shadow-md"><i class="fa fa-edit text-black mr-2"></i>edit</a>
-                        <a href="" class="bg-red-500 px-2 py-2 rounded-md text-black shadow-md"><i class="fa fa-trash text-black mr-2"></i>delete</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="row pt-4 pb-4 rounded-md bg-slate-200">
+      <div class="col">
+        <p class="text-lg font-bold">Tabel Data Produk</p>
+        <a href="/produk/create" class="px-3 py-2 rounded-md hover:bg-emerald-400 bg-emerald-300 shadow-md text-slate-900 hover:text-slate-900 font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Tambah Data</a>
+        <table class="w-full border border-slate-900 mt-4 text-center">
+          <thead>
+            <tr class="bg-emerald-200">
+              <th class="py-2 px-4 border-b">Gambar</th>
+              <th class="py-2 px-4 border-b">Harag Noken</th>
+              <th class="py-2 px-4 border-b">Ukuran Noken</th>
+              <th class="py-2 px-4 border-b">Motif Noken</th>
+              <th class="py-2 px-4 border-b">Jenis Noken</th>
+              <th class="py-2 px-4 border-b">Nama Pengrajin</th>
+              <th class="py-2 px-4 border-b">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-emerald-100">
+              <td class="py-3 px-4 border-b">huya</td>
+              <td class="py-3 px-4 border-b">Produk A</td>
+              <td class="py-3 px-4 border-b">Rp 100.000</td>
+              <td class="py-3 px-4 border-b">Rp 100.000</td>
+              <td class="py-3 px-4 border-b">Rp 100.000</td>
+              <td class="py-3 px-4 border-b">Rp 100.000</td>
+              <td class="py-3 px-4 border-b">
+                <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-2 text-white"><i class="fa fa-eye"></i></a>
+                <a href="" class="bg-blue-600 hover:bg-blue-500 rounded p-2 text-white"><i class="fa fa-pen"></i></a>
+                <a href="" class="bg-red-600 hover:bg-red-500 rounded p-2 text-white"><i class="fa fa-trash"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

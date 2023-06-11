@@ -3,7 +3,7 @@
 <?= $this->Section('page-content'); ?>
 <div class="page-wrapper">
   <div class="content container-fluid">
-    <h4 class="text-emerald-400 pb-3">Halaman Create</h4>
+    <h4 class="text-emerald-400 pb-3">Halaman Create Kriteria</h4>
     <div class="">
       <div class="row">
         <div class="col-6 mx-60 ml-10 bg-slate-200 p-3 rounded-md pr-5">
@@ -33,13 +33,13 @@
               </select>
             </div>
             <div class="mt-6">
-              <button type="submit" class="inline-flex items-center px-4 py-2 bg-sky-400 border border-transparent rounded-md font-semibold text-white hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md">
+              <button type="submit" class="inline-flex items-center px-4 py-2 bg-emerald-500 border border-transparent rounded-md font-semibold text-slate-900 hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md">
                 <i class=""></i>
                 Simpan
               </button>
             </div>
             <div class="mt-6">
-              <a href="<?= base_url('/kriteria') ?>" class="bg-sky-400 px-2 py-2.5 rounded-md text hover:bg-sky-300 text-slate-900 font-bold shadow-md hover:text-slate-900"><i class="fa fa-backward mr-1"></i>Kembali</a>
+              <a href="<?= base_url('/kriteria') ?>" class="bg-emerald-500 px-2 py-2.5 rounded-md text hover:bg-emerald-400 text-slate-900 font-bold shadow-md hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fa fa-backward mr-1"></i>Kembali</a>
             </div>
           </form>
         </div>

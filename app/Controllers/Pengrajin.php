@@ -14,6 +14,11 @@ class Pengrajin extends BaseController
     return view('pengrajin/produk/index');
   }
 
+  public function create_produk()
+  {
+    return view('pengrajin/produk/create');
+  }
+
   public function detail_produk()
   {
     return view('pengrajin/detail_produk/index');

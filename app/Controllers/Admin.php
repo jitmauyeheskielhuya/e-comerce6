@@ -14,7 +14,7 @@ class Admin extends BaseController
     return view('admin/kriteria/index');
   }
 
-  public function create()
+  public function create_kriteria()
   {
     return view('admin/kriteria/create');
   }
@@ -22,5 +22,10 @@ class Admin extends BaseController
   public function subkriteria()
   {
     return view('admin/subkriteria/index');
+  }
+
+  public function create_subkriteria()
+  {
+    return view('admin/subkriteria/create');
   }
 }
