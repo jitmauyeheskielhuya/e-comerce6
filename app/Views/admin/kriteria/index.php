@@ -5,7 +5,7 @@
   <div class="content container-fluid">
     <h4 class="text-emerald-400 pb-3">Halaman Data Kriteria</h4>
     <div class="">
-      <a href="<?= base_url('/admin/create') ?>" class="bg-emerald-200	text-black p-2 mt-2 rounded border-emerald-800 border-1">Tambah data </a>
+      <a href="<?= base_url('/admin/create') ?>" class="bg-emerald-200	text-black px-3 py-2 mt-2 rounded-md border-emerald-800 shadow-md">Tambah data </a>
       <table class="table bg-slate-200 rounded-md divide-gray-200 mt-3">
         <thead class="divide-gray-200">
           <tr class="bg-emerald-800 text-center">

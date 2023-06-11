@@ -34,11 +34,12 @@
             </div>
             <div class="mt-6">
               <button type="submit" class="inline-flex items-center px-4 py-2 bg-sky-400 border border-transparent rounded-md font-semibold text-white hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md">
+                <i class=""></i>
                 Simpan
               </button>
             </div>
             <div class="mt-6">
-              <a href="<?= base_url('/kriteria') ?>" class="bg-sky-400 px-4 py-2 rounded-md hover:bg-sky-300 text-slate-900 font-bold shadow-md"><i class="fa fa-backward mr-1"></i>Kembali</a>
+              <a href="<?= base_url('/kriteria') ?>" class="bg-sky-400 px-2 py-2.5 rounded-md text hover:bg-sky-300 text-slate-900 font-bold shadow-md hover:text-slate-900"><i class="fa fa-backward mr-1"></i>Kembali</a>
             </div>
           </form>
         </div>
