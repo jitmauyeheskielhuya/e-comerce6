@@ -29,7 +29,11 @@
               <input type="text" id="nama-pengrajin" name="nama-pengrajin" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             </div>
             <div class="mt-4">
-              <label for="gambar-noken" class="block text-sm font-medium text-gray-700">Upload Gambar</label>
+              <label for="nama-pengrajin" class="block text-sm font-medium text-gray-700">Lokasi Penjualan Produk</label>
+              <input type="text" id="nama-pengrajin" name="nama-pengrajin" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mt-4">
+              <label for="gambar-noken" class="block text-sm font-medium text-gray-700">Upload Gambar Produk</label>
               <input type="file" id="gambar-noken" name="gambar-noken" class="mt-1 block">
             </div>
             <div class="mt-6">

@@ -3,7 +3,7 @@
 <?= $this->Section('page-content'); ?>
 <div class="page-wrapper">
   <div class="content container-fluid">
-    <h4 class="text-emerald-400 pb-3">Data Subkriteria</h4>
+    <h4 class="text-emerald-400 pb-3">Halaman Data Subkriteria</h4>
     <div class="row pt-4 pb-4 rounded-md bg-slate-200">
       <div class="col">
         <p class="text-lg font-bold">Tabel Data Subkriteria</p>

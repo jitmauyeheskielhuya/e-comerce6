@@ -29,9 +29,9 @@
               <td class="py-3 px-4 border-b">Rp 100.000</td>
               <td class="py-3 px-4 border-b">Rp 100.000</td>
               <td class="py-3 px-4 border-b">
-                <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-2 text-white"><i class="fa fa-eye"></i></a>
-                <a href="" class="bg-blue-600 hover:bg-blue-500 rounded p-2 text-white"><i class="fa fa-pen"></i></a>
-                <a href="" class="bg-red-600 hover:bg-red-500 rounded p-2 text-white"><i class="fa fa-trash"></i></a>
+                <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-2 text-white shadow-md"><i class="fa fa-eye"></i></a>
+                <a href="" class="bg-blue-600 hover:bg-blue-500 rounded p-2 text-white shadow-md"><i class="fa fa-pen"></i></a>
+                <a href="" class="bg-red-600 hover:bg-red-500 rounded p-2 text-white shadow-md"><i class="fa fa-trash"></i></a>
               </td>
             </tr>
           </tbody>

@@ -181,20 +181,20 @@
 
             <!-- Disperindagkop -->
             <?php if (in_groups("disperindagkop")) : ?>
-              <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="http://localhost:8080/" class="text-emerald-400 hover:text-emerald-500 bg-none"><i class="fas fa-holly-berry"></i> <span class="">Beranda</span></a>
+              <li class="">
+                <a href="http://localhost:8080/" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">Beranda</span></a>
               </li>
-              <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="<?= base_url('/laporan_produk') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none"><i class="fas fa-holly-berry"></i> <span class="">L Data Produk</span></a>
+              <li class="">
+                <a href="<?= base_url('/laporan_produk') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">L Data Produk</span></a>
               </li>
-              <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="<?= base_url('/laporan_ikm') ?>" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-comment-dollar"></i> <span class="">L Data IKM</span></a>
+              <li class="">
+                <a href="<?= base_url('/laporan_ikm') ?>" class="text-emerald-400 hover:text-emerald-500 py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-comment-dollar"></i> <span class="">L Data IKM</span></a>
               </li>
-              <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="<?= base_url('/laporan_P_ikm') ?>" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-clipboard-list"></i> <span class="py-5">L Perkrmbangan IKM</span></a>
+              <li class="">
+                <a href="<?= base_url('/laporan_P_ikm') ?>" class="text-emerald-400 hover:text-emerald-500 py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-clipboard-list"></i> <span class="py-5">L Perkrmbangan IKM</span></a>
               </li>
-              <li class="py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50">
-                <a href="<?= base_url('/laporan_transaksi') ?>" class="text-emerald-400 hover:text-emerald-500"><i class="fas fa-clipboard-list"></i> <span class="py-5">L Transaksi</span></a>
+              <li class="">
+                <a href="<?= base_url('/laporan_transaksi') ?>" class="text-emerald-400 hover:text-emerald-500 py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-clipboard-list"></i> <span class="py-5">L Transaksi</span></a>
               </li>
             <?php endif; ?>
 
