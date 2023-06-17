@@ -6,7 +6,7 @@
     <h4 class="text-emerald-400 pb-3">Laporan Data IKM</h4>
     <div class="row pt-4 pb-4 rounded-md bg-slate-200">
       <div class="col">
-        <p class="text-lg font-bold">Tabel Laporan Data Produk</p>
+        <p class="text-lg font-bold">Tabel Laporan Data IKM</p>
         <table class="w-full border border-slate-900 mt-4 text-center">
           <thead>
             <tr class="bg-emerald-200">

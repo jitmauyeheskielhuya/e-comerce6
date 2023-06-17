@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Tailwind CSS</title>
+  <title>E-Comerce Noken Papua</title>
   <link rel="stylesheet" href="<?= base_url() ?>/css/app.css">
+  <link rel="shortcut icon" href="<?= base_url() ?>/template1/assets/img/k2.png">
   <link href="<?= base_url('template2') ?>/dist/css/final.css" rel="stylesheet">
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
@@ -38,39 +39,30 @@
             dark:shadow-slate-500 lg:dark:bg-transparent">
             <ul class="block lg:flex xl:flex">
               <li class="group">
-                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
+                <a href="#home" class="text-base text-dark py-2 mx-2 flex group-hover:text-primary dark:text-white">Beranda</a>
               </li>
               <li class="group">
-                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Info SMART</a>
+                <a href="#about" class="text-base text-dark py-2 mx-2 flex group-hover:text-primary dark:text-white">Info SMART</a>
               </li>
               <li class="group">
-                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Bukti Pemesanan</a>
+                <a href="#clients" class="text-base text-dark py-2 mx-2 flex group-hover:text-primary dark:text-white">Bukti Pemesanan</a>
               </li>
               <li class="group">
-                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Konfirmasi</a>
+                <a href="#blog" class="text-base text-dark py-2 mx-2 flex group-hover:text-primary dark:text-white">Konfirmasi</a>
               </li>
               <li class="group">
-                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">keranjang</a>
+                <a href="#contact" class="text-base text-dark py-2 mx-2 flex group-hover:text-primary dark:text-white">keranjang</a>
               </li>
-              <li class="group relative flex justify-center items-center gap-5">
-                <div class="relative group inline-block text-left">
-                  <div>
-                    <button type="button" class="inline-flex group justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="dropdown-menu-button" aria-expanded="true" aria-haspopup="true">
-                      Pilih Opsi
-                      <!-- Icon dropdown -->
-                      <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M6 6l4 4 4-4H6z" />
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="origin-top-right group-focus:block hidden absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-menu-button" tabindex="-1">
-                    <div class="py-1" role="none">
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-1">Opsi 1</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-2">Opsi 2</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" id="dropdown-menu-item-3">Opsi 3</a>
-                    </div>
-                  </div>
-                </div>
+              <li class="group">
+                <a href="" class="text-base text-dark py-2 mx-2 flex group-hover:text-primary dark:text-white">
+                  <img src="<?= base_url() ?>/template1/assets/img/icons/us1.png" alt="" class="rounded-full w-6 h-6 bg-none">
+                  <?= user()->username ?></a>
+              </li>
+              <li class="group">
+                <a href="<?= base_url('/logout'); ?>" class="text-base text-dark py-2 mx-2 flex group-hover:text-primary dark:text-white">
+                  <img src="<?= base_url() ?>/template1/assets/img/icons/user4.png" alt="" class="rounded-full w-6 h-6">
+                  Logout
+                </a>
               </li>
               <li class="flex items-center pl-8 mt-3 lg:mt-0">
                 <div class="flex">
