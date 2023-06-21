@@ -40,7 +40,42 @@ class Validation extends BaseConfig
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
-    // --------------------------------------------------------------------
-    // Rules
-    // --------------------------------------------------------------------
+  // --------------------------------------------------------------------
+  // Rules
+  // --------------------------------------------------------------------
+  // Validasi data Produk
+  public $produk = [
+    'harga_noken' => 'required|max_length[50]',
+    'ukuran_noken' => 'required|max_length[50]',
+    'motif_noken' => 'required|max_length[50]',
+    'jenis_noken' => 'required|max_length[50]',
+    'nama_pengrajin' => 'required|max_length[50]',
+    'lokasi_penjualan' => 'required|max_length[50]',
+    'gambar_noken' => 'uploaded[gambar_noken]|mime_in[gambar_noken,image/jpg,image/jpeg,image/png,image/gif]|max_size[gambar_noken,50000]',
+    'tgl_daftar' => 'required',
+  ];
+
+  public $produk_errors = [
+    'harga_noken' => [
+      'required' => 'wajib di isi tidak boleh kosong',
+    ],
+    'ukuran_noken' => [
+      'required' => 'wajib di isi',
+    ],
+    'motif_noken' => [
+      'required' => 'wajib di isi',
+    ],
+    'jenis_noken' => [
+      'required' => 'wajib di isi',
+    ],
+    'nama_pengrajin' => [
+      'required' => 'wajib di isi',
+    ],
+    'lokasi_penjualan' => [
+      'required' => 'wajib di isi',
+    ],
+    'gambar_noken' => [
+      'uploaded' => 'wajib di isi',
+    ],
+  ];
 }

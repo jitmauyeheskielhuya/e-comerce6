@@ -42,15 +42,34 @@ $routes->get('/akun', 'Akun::akun_baru');
 $routes->get('/kriteria', 'Admin::kriteria', ['filter' => 'role:admin']);
 $routes->get('/kriteria/index', 'Admin::kriteria', ['filter' => 'role:admin']);
 
-$routes->get('/kriteria/create', 'Admin::create_kriteria', ['filter' => 'role:admin']);
-$routes->get('/kriteria/create/create', 'Admin::create_kriteria', ['filter' => 'role:admin']);
+$routes->get('/kriteria/tambah', 'Admin::tambah_kriteria', ['filter' => 'role:admin']);
+$routes->get('/kriteria/tambah/tambah', 'Admin::tambah_kriteria', ['filter' => 'role:admin']);
+
+$routes->post('admin/save', 'Admin::save', ['filter' => 'role:admin']);
+
+$routes->get('/kriteria/edit/(:any)', 'Admin::edit/$1', ['filter' => 'role:admin']);
+
+$routes->post('admin/update/(:any)', 'Admin::update/$1', ['filter' => 'role:admin']);
+
+$routes->get('kriteria/delete/(:any)', 'Admin::delete/$1', ['filter' => 'role:admin']);
+
+
+
 
 // Admin/Data Subkriteria
 $routes->get('/subkriteria', 'Admin::subkriteria', ['filter' => 'role:admin']);
 $routes->get('/subkriteria/subkriteria', 'Admin::subkriteria', ['filter' => 'role:admin']);
 
-$routes->get('/subkriteria/create', 'Admin::create_subkriteria', ['filter' => 'role:admin']);
-$routes->get('/subkriteria/create/create', 'Admin::create_subkriteria', ['filter' => 'role:admin']);
+$routes->get('/subkriteria/tambah', 'Admin::tambah_subkriteria', ['filter' => 'role:admin']);
+$routes->get('/subkriteria/tambah/tambah', 'Admin::tambah_subkriteria', ['filter' => 'role:admin']);
+
+$routes->post('admin/save_subkriteria', 'Admin::save_subkriteria', ['filter' => 'role:admin']);
+
+$routes->get('/subkriteria/edit/(:any)', 'Admin::edit_subkriteria/$1', ['filter' => 'role:admin']);
+
+$routes->post('admin/update_subkriteria/(:any)', 'Admin::update_subkriteria/$1', ['filter' => 'role:admin']);
+
+$routes->get('subkriteria/delete_subkriteria/(:any)', 'Admin::delete_subkriteria/$1', ['filter' => 'role:admin']);
 
 
 // Pengrajin/Dashboard
@@ -61,8 +80,18 @@ $routes->get('/pengrajin/index', 'Pengrajin::index', ['filter' => 'role:pengraji
 $routes->get('/produk', 'Pengrajin::produk', ['filter' => 'role:pengrajin']);
 $routes->get('/produk/produk', 'Pengrajin::produk', ['filter' => 'role:pengrajin']);
 
-$routes->get('/produk/create', 'Pengrajin::create_produk', ['filter' => 'role:pengrajin']);
-$routes->get('/produk/create/create', 'Pengrajin::create_produk', ['filter' => 'role:pengrajin']);
+$routes->get('/produk/tambah', 'Pengrajin::tambah_produk', ['filter' => 'role:pengrajin']);
+$routes->get('/produk/tambah/tambah', 'Pengrajin::tambah_produk', ['filter' => 'role:pengrajin']);
+
+$routes->post('pengrajin/save', 'Pengrajin::save', ['filter' => 'role:pengrajin']);
+
+$routes->get('/produk/edit_produk/(:any)', 'Pengrajin::edit_produk/$1', ['filter' => 'role:pengrajin']);
+
+$routes->post('pengrajin/update_produk/(:any)', 'Pengrajin::update_produk/$1', ['filter' => 'role:pengrajin']);
+
+$routes->get('produk/delete_produk/(:any)', 'Pengrajin::delete_produk/$1', ['filter' => 'role:pengrajin']);
+
+
 
 // Pengrajin/Data Detail Produk
 $routes->get('/detail_produk', 'Pengrajin::detail_produk', ['filter' => 'role:pengrajin']);

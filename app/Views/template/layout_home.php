@@ -7,14 +7,21 @@
   <title>E-Comerce Noken Papua</title>
   <link rel="stylesheet" href="<?= base_url() ?>/css/app.css">
   <link rel="shortcut icon" href="<?= base_url() ?>/template1/assets/img/k2.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/plugins/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/plugins/feather/feather.css">
-  <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/plugins/icons/flags/flags.css">
-  <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/plugins/fontawesome/css/fontawesome.min.css">
-  <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/plugins/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="<?= base_url() ?>/template1/assets/css/style.css">
+
+  <link rel="stylesheet" href="<?= base_url(); ?>/template1/assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="<?= base_url(); ?>/template1/assets/plugins/feather/feather.css">
+
+  <link rel="stylesheet" href="<?= base_url(); ?>/template1/assets/plugins/icons/flags/flags.css">
+
+  <link rel="stylesheet" href="<?= base_url(); ?>/template1/assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="<?= base_url(); ?>/template1/assets/plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="<?= base_url(); ?>/template1/assets/plugins/datatables/datatables.min.css">
+
+  <link rel="stylesheet" href="<?= base_url(); ?>/template1/assets/css/style.css">
 </head>
 
 <body>
@@ -23,14 +30,14 @@
 
     <div class="header shadow-md">
 
-      <div class="header-left">
-        <a href="http://localhost:8080/" class=" w-20 h-20 pt-2.5">
+      <div class="header-left flex">
+        <a href="http://localhost:8080/" class="lg:w-20 lg:h-20 lg:pt-2.5 md:w-14 md:h-14 md:mr-3">
           <img src="<?= base_url() ?>/template1/assets/img/k.png" alt="Logo" class="rounded-full logo">
         </a>
         <a href="#" class="logo">
           <h6 class="text-center mr-7 font-bold bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">E-Comerce Noken Papua</h6>
         </a>
-        <a href="http://localhost:8080/" class="">
+        <a href="http://localhost:8080/" class="flex w-12 h-12 ml-10 lg:hidden">
           <img src="<?= base_url() ?>/template1/assets/img/k.png" alt="Logo" class="rounded-full logo logo-small">
         </a>
       </div>
@@ -207,13 +214,18 @@
 
   </div>
 
-  <script src="<?= base_url() ?>/template1/assets/js/jquery-3.6.0.min.js"></script>
-  <script src="<?= base_url() ?>/template1/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url() ?>/template1/assets/js/feather.min.js"></script>
-  <script src="<?= base_url() ?>/template1/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="<?= base_url() ?>/template1/assets/plugins/apexchart/apexcharts.min.js"></script>
-  <script src="<?= base_url() ?>/template1/assets/plugins/apexchart/chart-data.js"></script>
-  <script src="<?= base_url() ?>/template1/assets/js/script.js"></script>
+  <script src="<?= base_url(); ?>/template1/assets/js/jquery-3.6.0.min.js"></script>
+
+  <script src="<?= base_url(); ?>/template1/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="<?= base_url(); ?>/template1/assets/js/feather.min.js"></script>
+
+  <script src="<?= base_url(); ?>/template1/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+  <script src="<?= base_url(); ?>/template1/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url(); ?>/template1/assets/plugins/datatables/datatables.min.js"></script>
+
+  <script src="<?= base_url(); ?>/template1/assets/js/script.js"></script>
 </body>
 
 </html>

@@ -7,22 +7,14 @@
     <div class="">
       <div class="row">
         <div class="col-6 mx-60 ml-10 bg-slate-200 p-3 rounded-md pr-5">
-          <form>
-            <div>
-              <label for="jenis-noken" class="block text-sm font-medium text-gray-700">Ukuran</label>
-              <select id="jenis-noken" name="jenis-noken" class="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                <option value="motif1"> -20 cm </option>
-                <option value="motif1"> 20-25 cm </option>
-                <option value="motif1"> 26-30 cm </option>
-                <!-- Tambahkan opsi motif lainnya sesuai kebutuhan -->
-              </select>
+          <form action="<?= base_url('admin/save_subkriteria'); ?>" method="post">
+            <div class="mb-4">
+              <label class="block text-emerald-400 font-medium text-base mb-2">Nama Subkriteria</label>
+              <input type="text" name="nama_subkriteria" class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Nama Kriteria" autofocus>
             </div>
-            <div class="mt-4">
-              <label for="jenis-rajutan" class="block text-sm font-medium text-gray-700">Harga</label>
-              <select id="jenis-rajutan" name="jenis-rajutan" class="mt-1 block w-full p-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                <option value="rajutan1">100.000</option>
-                <!-- Tambahkan opsi rajutan lainnya sesuai kebutuhan -->
-              </select>
+            <div class="mb-4">
+              <label class="block text-emerald-400 font-medium text-base mb-2">Nilai Subkriteria</label>
+              <input type="text" name="nilai_subkriteria" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Bobot Kriteria">
             </div>
             <div class="mt-6">
               <button type="submit" class="inline-flex items-center px-4 py-2 bg-emerald-500 border border-transparent rounded-md font-semibold text-slate-900 hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md">

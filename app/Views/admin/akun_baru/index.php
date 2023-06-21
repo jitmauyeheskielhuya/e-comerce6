@@ -8,7 +8,7 @@
       <div class="row pt-4 pb-4 rounded-md bg-slate-200">
         <div class="col">
           <p class="text-lg font-bold">Tabel Data Subkriteria</p>
-          <table class="w-full border border-slate-900 mt-4 text-center">
+          <table class="w-full border border-slate-900 mt-4 text-center datatable table table-stripped">
             <thead>
               <tr class="bg-emerald-200">
                 <th class="py-2 px-4 border-b">No</th>
@@ -39,10 +39,10 @@
 
 
 
-    <footer class="bg-slate-400 mt-96 rounded-t-md">
-      <p class="text-emerald-600">Copyright © <?= date('Y'); ?> Yeheskiel Jitmau</p>
-    </footer>
   </div>
+  <footer class="bg-slate-400 mt-96 rounded-t-md">
+    <p class="text-emerald-600">Copyright © <?= date('Y'); ?> Yeheskiel Jitmau</p>
+  </footer>
   <?= $this->endSection(); ?>
 
 
