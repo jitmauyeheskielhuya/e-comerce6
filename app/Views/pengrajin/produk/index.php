@@ -35,7 +35,7 @@
                 <td class="py-3 px-4 border-b"><?= $value['ukuran_noken']; ?></td>
                 <td class="py-3 px-4 border-b"><?= $value['motif_noken']; ?></td>
                 <td class="py-3 px-4 border-b"><?= $value['jenis_noken']; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['nama_pengrajin']; ?></td>
+                <td class="py-3 px-4 border-b"><?= $value['username']; ?></td>
                 <td class="py-3 px-4 border-b">
                   <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-2 text-white"><i class="fa fa-eye"></i></a>
                   <a href="<?= base_url('/produk/edit_produk/' . $value['id_produk']) ?>" class="bg-blue-600 hover:bg-blue-500 rounded p-2 text-white"><i class="fa fa-pen"></i></a>

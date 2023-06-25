@@ -49,7 +49,7 @@ class Validation extends BaseConfig
     'ukuran_noken' => 'required|max_length[50]',
     'motif_noken' => 'required|max_length[50]',
     'jenis_noken' => 'required|max_length[50]',
-    'nama_pengrajin' => 'required|max_length[50]',
+    // 'nama_pengrajin' => 'required|max_length[50]',
     'lokasi_penjualan' => 'required|max_length[50]',
     'gambar_noken' => 'uploaded[gambar_noken]|mime_in[gambar_noken,image/jpg,image/jpeg,image/png,image/gif]|max_size[gambar_noken,50000]',
     'tgl_daftar' => 'required',

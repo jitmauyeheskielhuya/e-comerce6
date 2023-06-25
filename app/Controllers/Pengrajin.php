@@ -47,7 +47,7 @@ class Pengrajin extends BaseController
       'ukuran_noken' => $this->request->getPost('ukuran_noken'),
       'motif_noken' => $this->request->getPost('motif_noken'),
       'jenis_noken' => $this->request->getPost('jenis_noken'),
-      'nama_pengrajin' => $this->request->getPost('nama_pengrajin'),
+      'id_pengrajin' => user()->id,
       'lokasi_penjualan' => $this->request->getPost('lokasi_penjualan'),
       'gambar_noken' => $name,
       'tgl_daftar' => $this->request->getPost('tgl_daftar'),
@@ -75,16 +75,29 @@ class Pengrajin extends BaseController
 
   public function update_produk($id_produk)
   {
+    $validation = \Config\Services::validation();
+
+
     $data = [
       'harga_noken' => $this->request->getPost('harga_noken'),
       'ukuran_noken' => $this->request->getPost('ukuran_noken'),
       'motif_noken' => $this->request->getPost('motif_noken'),
       'jenis_noken' => $this->request->getPost('jenis_noken'),
-      'nama_pengrajin' => $this->request->getPost('nama_pengrajin'),
+      // 'nama_pengrajin' => $this->request->getPost('nama_pengrajin'),
       'lokasi_penjualan' => $this->request->getPost('lokasi_penjualan'),
-      'gambar_noken' => $this->request->getPost('gambar_noken'),
+      // 'gambar_noken' => $this->request->getPost('gambar_noken'),
       'tgl_daftar' => $this->request->getPost('tgl_daftar'),
     ];
+
+    // mengambil file upload
+    $image = $this->request->getFile('gambar_noken');
+    // rendom file
+    if ($image->getName() != '') {
+      $name = $image->getRandomName();
+      $image->move(ROOTPATH . 'public/gambar_noken', $name);
+      $data['gambar_noken'] = $name;
+    }
+
     $this->ProdukModal->update_produk($data, $id_produk);
     session()->setFlashdata('success', 'Data Berhasil Diupdate !!!');
     return redirect()->to(base_url('produk'));

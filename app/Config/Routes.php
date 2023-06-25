@@ -79,16 +79,11 @@ $routes->get('/pengrajin/index', 'Pengrajin::index', ['filter' => 'role:pengraji
 // Pengrajin/Data Produk
 $routes->get('/produk', 'Pengrajin::produk', ['filter' => 'role:pengrajin']);
 $routes->get('/produk/produk', 'Pengrajin::produk', ['filter' => 'role:pengrajin']);
-
 $routes->get('/produk/tambah', 'Pengrajin::tambah_produk', ['filter' => 'role:pengrajin']);
 $routes->get('/produk/tambah/tambah', 'Pengrajin::tambah_produk', ['filter' => 'role:pengrajin']);
-
 $routes->post('pengrajin/save', 'Pengrajin::save', ['filter' => 'role:pengrajin']);
-
 $routes->get('/produk/edit_produk/(:any)', 'Pengrajin::edit_produk/$1', ['filter' => 'role:pengrajin']);
-
 $routes->post('pengrajin/update_produk/(:any)', 'Pengrajin::update_produk/$1', ['filter' => 'role:pengrajin']);
-
 $routes->get('produk/delete_produk/(:any)', 'Pengrajin::delete_produk/$1', ['filter' => 'role:pengrajin']);
 
 
@@ -127,8 +122,18 @@ $routes->get('/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter
 $routes->get('/laporan_transaksi/laporan_transaksi', 'Disperindagkop::laporan_transaksi', ['filter' => 'role:disperindagkop']);
 
 // Pelanggan/Dasboard Pelanggan
-$routes->get('/pelanggan', 'Pelanggan::index', ['filter' => 'role:pelanggan']);
-$routes->get('/pelanggan/index', 'Pelanggan::index', ['filter' => 'role:pelanggan']);
+$routes->get('/pelanggan', 'Pelanggan::layout_pelanggan', ['filter' => 'role:pelanggan']);
+$routes->get('/pelanggan/layout_pelanggan', 'Pelanggan::layout_pelanggan', ['filter' => 'role:pelanggan']);
+
+$routes->get('pelanggan/cek', 'Pelanggan::cek', ['filter' => 'role:pelanggan']);
+
+$routes->post('/pelanggan/add', 'Pelanggan::add', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/clear', 'Pelanggan::clear', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/cart', 'Pelanggan::cart', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/delete/(:any)', 'Pelanggan::delete/$1', ['filter' => 'role:pelanggan']);
 
 
 

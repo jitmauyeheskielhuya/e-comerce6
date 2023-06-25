@@ -24,43 +24,44 @@
           </div>
         <?php } ?>
 
-        <form action="<?= base_url('pengrajin/update_produk/' . $produk['id_produk']) ?>" method="post">
-          <div class="mb-4">
-            <label for="harga" class="block font-medium mb-2 text-emerald-400">Harga Noken</label>
-            <input type="text" value="<?= $produk['harga_noken'] ?>" name="harga_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="mb-4">
-            <label for="ukuran" class="block font-medium mb-2 text-emerald-400">Ukuran Noken</label>
-            <input type="text" value="<?= $produk['ukuran_noken'] ?>" name="ukuran_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="mb-4">
-            <label for="motif" class="block font-medium mb-2 text-emerald-400">Motif Noken</label>
-            <input type="text" value="<?= $produk['motif_noken'] ?>" name="motif_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="mb-4">
-            <label for="jenis" class="block font-medium mb-2 text-emerald-400">Jenis Noken</label>
-            <input type="text" value="<?= $produk['jenis_noken'] ?>" name="jenis_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="mb-4">
-            <label for="pengrajin" class="block font-medium mb-2 text-emerald-400">Nama Pengrajin</label>
-            <input type="text" value="<?= $produk['nama_pengrajin'] ?>" name="nama_pengrajin" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="mb-4">
-            <label for="lokasi" class="block font-medium mb-2 text-emerald-400">Lokasi Penjualan</label>
-            <input type="text" value="<?= $produk['lokasi_penjualan'] ?>" name="lokasi_penjualan" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="mb-4">
-            <label for="gambar" class="block font-medium mb-2 text-emerald-400">Gambar Noken</label>
-            <input type="file" value="<?= $produk['gambar_noken'] ?>" name="gambar_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="mb-4">
-            <label for="tgl_daftar" class="block font-medium mb-2 text-emerald-400">Tanggal Daftar</label>
-            <input type="date" value="<?= $produk['tgl_daftar'] ?>" name="tgl_daftar" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-          </div>
-          <div class="flex justify-start">
-            <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-white py-2 px-4 rounded-md shadow-md">Simpan</button>
-          </div>
-        </form>
+        <?= form_open_multipart(base_url('pengrajin/update_produk/' . $produk['id_produk'])); ?>
+        <div class="mb-4">
+          <label for="harga" class="block font-medium mb-2 text-emerald-400">Harga Noken</label>
+          <input type="text" value="<?= $produk['harga_noken'] ?>" name="harga_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="mb-4">
+          <label for="ukuran" class="block font-medium mb-2 text-emerald-400">Ukuran Noken</label>
+          <input type="text" value="<?= $produk['ukuran_noken'] ?>" name="ukuran_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="mb-4">
+          <label for="motif" class="block font-medium mb-2 text-emerald-400">Motif Noken</label>
+          <input type="text" value="<?= $produk['motif_noken'] ?>" name="motif_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="mb-4">
+          <label for="jenis" class="block font-medium mb-2 text-emerald-400">Jenis Noken</label>
+          <input type="text" value="<?= $produk['jenis_noken'] ?>" name="jenis_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="mb-4">
+          <label for="pengrajin" class="block font-medium mb-2 text-emerald-400">Nama Pengrajin</label>
+          <input type="text" value="<?= $produk['nama_pengrajin'] ?>" name="" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="mb-4">
+          <label for="lokasi" class="block font-medium mb-2 text-emerald-400">Lokasi Penjualan</label>
+          <input type="text" value="<?= $produk['lokasi_penjualan'] ?>" name="lokasi_penjualan" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="mb-4">
+          <label for="gambar" class="block font-medium mb-2 text-emerald-400">Gambar Noken</label>
+          <input type="file" value="" name="gambar_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+          <img src="/gambar_noken/<?= $produk['gambar_noken'] ?>" alt="" width="100" srcset="">
+        </div>
+        <div class="mb-4">
+          <label for="tgl_daftar" class="block font-medium mb-2 text-emerald-400">Tanggal Daftar</label>
+          <input type="date" value="<?= $produk['tgl_daftar'] ?>" name="tgl_daftar" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="flex justify-start">
+          <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-white py-2 px-4 rounded-md shadow-md">Simpan</button>
+        </div>
+        <?= form_close(); ?>
       </div>
     </div>
     <footer class=" bg-slate-400 mt-96 rounded-t-md">

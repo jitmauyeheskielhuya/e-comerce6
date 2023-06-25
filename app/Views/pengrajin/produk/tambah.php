@@ -43,7 +43,7 @@
         </div>
         <div class="mb-4">
           <label for="pengrajin" class="block font-medium mb-2 text-emerald-400">Nama Pengrajin</label>
-          <input type="text" name="nama_pengrajin" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+          <input type="text" readonly value="<?= user()->username ?>" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
         </div>
         <div class="mb-4">
           <label for="lokasi" class="block font-medium mb-2 text-emerald-400">Lokasi Penjualan</label>
