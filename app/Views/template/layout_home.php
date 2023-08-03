@@ -176,7 +176,7 @@
                 <a href="<?= base_url('/pengrajin') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">Beranda</span></a>
               </li>
               <li class="">
-                <a href="<?= base_url('/produk') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">D Produk</span></a>
+                <a href="<?= base_url('/produk') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">Data Produk</span></a>
               </li>
               <li class="">
                 <a href="<?= base_url('/pemesanan_produk') ?>" class="text-emerald-400 hover:text-emerald-500 py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-clipboard-list"></i> <span class="py-5">Pemesanan Produk</span></a>

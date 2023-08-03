@@ -54,14 +54,12 @@
                 <a href="<?= base_url('/pelanggan') ?>" class="text-base text-dark py-2 mx-2 flex group-hover:text-emerald-400 dark:text-white"><i class="fa fa-home text-2xl mr-1"></i>Beranda</a>
               </li>
               <li class="group">
-                <a href="#about" class="text-base text-dark py-2 mx-2 flex group-hover:text-emerald-400 dark:text-white"><i class="fa fa-search-plus text-2xl mr-1"></i>Info SMART</a>
+                <a href="pelanggan/smart" class="text-base text-dark py-2 mx-2 flex group-hover:text-emerald-400 dark:text-white"><i class="fa fa-search-plus text-2xl mr-1"></i>Info SMART</a>
               </li>
               <li class="group">
-                <a href="#clients" class="text-base text-dark py-2 mx-2 flex group-hover:text-emerald-400 dark:text-white"><i class="fa fa-receipt text-2xl mr-1"></i>Bukti Pesanan</a>
+                <a href="/pelanggan/pembelian" class="text-base text-dark py-2 mx-2 flex group-hover:text-emerald-400 dark:text-white"><i class="fa fa-receipt text-2xl mr-1"></i>Bukti Pesanan</a>
               </li>
-              <li class="group">
-                <a href="#blog" class="text-base text-dark py-2 mx-2 flex group-hover:text-emerald-400 dark:text-white"><i class="fa fa-clipboard-check text-2xl mr-1"></i>Konfirmasi</a>
-              </li>
+
               <li class="group">
                 <a href="" class="text-base text-dark py-1 mx-2 flex group-hover:text-emerald-400 dark:text-white"><i class="fa fa-user mr-1 py-1 text-2xl"></i>
                   <?= user()->username ?></a>

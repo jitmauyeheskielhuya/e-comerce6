@@ -4,6 +4,7 @@ namespace Config;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
+$routes->get('/cekmidtrans', 'Midtrans::cekmidtrans');
 
 /*
  * --------------------------------------------------------------------
@@ -133,8 +134,42 @@ $routes->get('/pelanggan/clear', 'Pelanggan::clear', ['filter' => 'role:pelangga
 
 $routes->get('/pelanggan/cart', 'Pelanggan::cart', ['filter' => 'role:pelanggan']);
 
+$routes->post('/pelanggan/cart', 'Pelanggan::cart', ['filter' => 'role:pelanggan']);
+
 $routes->get('/pelanggan/delete/(:any)', 'Pelanggan::delete/$1', ['filter' => 'role:pelanggan']);
 
+// $routes->get('/pelanggan/cart', 'Pelanggan::transaksi', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/pembelian', 'Pelanggan::pembelian', ['filter' => 'role:pelanggan']);
+
+$routes->post('/pelanggan/proses', 'Pelanggan::proses', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/transaksi', 'Pelanggan::transaksi', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/ongkir', 'Ongkir::index', ['filter' => 'role:pelanggan']);
+
+$routes->post('/pelanggan/ongkir', 'Pelanggan::ongkir', ['filter' => 'role:pelanggan']);
+
+$routes->post('ongkir/cekongkir', 'Ongkir::cekongkir', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/paket', 'Paket::index', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/dataprov', 'Paket::dataprov', ['filter' => 'role:pelanggan']);
+$routes->post('/pelanggan/dataprov', 'Paket::dataprov', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/datadistrik', 'Paket::distrik', ['filter' => 'role:pelanggan']);
+$routes->post('/pelanggan/datadistrik', 'Paket::distrik', ['filter' => 'role:pelanggan']);
+
+$routes->post('/pelanggan/dataekspedisi', 'Paket::ekspedisi', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/datapaket', 'Paket::datapaket', ['filter' => 'role:pelanggan']);
+$routes->post('/pelanggan/datapaket', 'Paket::datapaket', ['filter' => 'role:pelanggan']);
+
+$routes->post('pelanggan/save1/(:any)', 'Pelanggan::save1/$1', ['filter' => 'role:pelanggan']);
+$routes->post('pelanggan/save1', 'Pelanggan::save1', ['filter' => 'role:pelanggan']);
+$routes->post('pelanggan/savetotal', 'Pelanggan::savetotal', ['filter' => 'role:pelanggan']);
+
+$routes->get('/pelanggan/smart', 'Pelanggan::smart', ['filter' => 'role:pelanggan']);
 
 
 $routes->get('/', 'user::index');

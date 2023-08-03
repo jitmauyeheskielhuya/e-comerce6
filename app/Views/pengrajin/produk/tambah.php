@@ -42,6 +42,10 @@
           <input type="text" name="jenis_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
         </div>
         <div class="mb-4">
+          <label for="jenis" class="block font-medium mb-2 text-emerald-400">Berat Noken</label>
+          <input type="text" name="berat_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
+        </div>
+        <div class="mb-4">
           <label for="pengrajin" class="block font-medium mb-2 text-emerald-400">Nama Pengrajin</label>
           <input type="text" readonly value="<?= user()->username ?>" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
         </div>

@@ -10,6 +10,7 @@ class BarangModel extends Model
 
   public function get_barang()
   {
+    
     return $this->findAll();
   }
 }

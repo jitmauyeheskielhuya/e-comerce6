@@ -5,14 +5,24 @@ namespace App\Controllers;
 use \CodeIgniter\Controller;
 use \App\Models\ProdukModel;
 use App\Controllers\BaseController;
+use App\Models\PembelianModel;
+use App\Models\PemesananModel;
+use App\Models\UsersModel;
 
 class Pengrajin extends BaseController
 {
   protected $ProdukModal;
+  protected $pembelianModel;
+  protected $pemesananModel;
+  protected $userModel;
+  
   public function __construct()
   {
     helper('form');
     $this->ProdukModal = new ProdukModel();
+    $this->pembelianModel = new PembelianModel();
+    $this->pemesananModel = new PemesananModel();
+    $this->userModel = new UsersModel();
   }
 
   
@@ -47,6 +57,7 @@ class Pengrajin extends BaseController
       'ukuran_noken' => $this->request->getPost('ukuran_noken'),
       'motif_noken' => $this->request->getPost('motif_noken'),
       'jenis_noken' => $this->request->getPost('jenis_noken'),
+      'berat_noken' => $this->request->getPost('berat_noken'),
       'id_pengrajin' => user()->id,
       'lokasi_penjualan' => $this->request->getPost('lokasi_penjualan'),
       'gambar_noken' => $name,
@@ -110,9 +121,12 @@ class Pengrajin extends BaseController
     return view('pengrajin/detail_produk/index');
   }
 
+
   public function pemesanan_produk()
   {
-    return view('pengrajin/pemesanan_produk/index');
+    $data['pemesanan'] = $this->pemesananModel->getAll();
+
+    return view('pengrajin/pemesanan_produk/index', $data);
   }
 
   public function perkembangan_ikm()
