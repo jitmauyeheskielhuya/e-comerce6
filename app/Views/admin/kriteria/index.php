@@ -21,7 +21,6 @@
             <tr class="bg-emerald-200">
               <th class="py-2 px-4 border-b">No</th>
               <th class="py-2 px-4 border-b">Nama Kriteria</th>
-              <th class="py-2 px-4 border-b">Bobot Kriteria</th>
               <th class="py-2 px-4 border-b">Aksi</th>
             </tr>
           </thead>
@@ -31,7 +30,6 @@
               <tr class="bg-emerald-100">
                 <td class="py-3 px-4 border-b"><?= $no++; ?></td>
                 <td class="py-3 px-4 border-b"><?= $value['nama_kriteria']; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['bobot_kriteria']; ?></td>
                 <td class="py-3 px-4 border-b">
                   <!-- <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-2 text-white"><i class="fa fa-eye"></i></a> -->
                   <a href="<?= base_url('kriteria/edit/' . $value['id_kriteria']) ?>" class="bg-blue-600 hover:bg-blue-500 rounded p-2 text-white"><i class="fa fa-pen"></i></a>

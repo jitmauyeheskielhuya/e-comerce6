@@ -20,8 +20,9 @@
           <thead>
             <tr class="bg-emerald-200">
               <th class="py-2 px-4 border-b">No</th>
-              <th class="py-2 px-4 border-b">Nama Subkriteria</th>
-              <th class="py-2 px-4 border-b">Nilai Subkriteria</th>
+              <th class="py-2 px-4 border-b">Nama Kriteria</th>
+              <th class="py-2 px-4 border-b">Range</th>
+              <th class="py-2 px-4 border-b">Nilai</th>
               <th class="py-2 px-4 border-b">Aksi</th>
             </tr>
           </thead>
@@ -30,8 +31,18 @@
             foreach ($subkriteria as $sk => $value) { ?>
               <tr class="bg-emerald-100">
                 <td class="py-3 px-4 border-b"><?= $no++; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['nama_subkriteria']; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['nilai_subkriteria']; ?></td>
+                <td class="py-3 px-4 border-b"><?= $value['nama_kriteria']; ?></td>
+                <td class="py-3 px-4 border-b">
+                  <?php
+                   echo $value['range_depan_subkriteria'];
+                  if($value['range_belakang_subkriteria'] != null && $value['range_depan_subkriteria'] != '>' && $value['range_depan_subkriteria'] != '<'  )
+                  {
+                    echo '-';
+                  };
+                  echo $value['range_belakang_subkriteria'];
+                  ?>
+                </td>
+                <td class="py-3 px-4 border-b"><?= $value['nilai_subkriteria'] ?></td>
                 <td class="py-3 px-4 border-b">
                   <!-- <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-2 text-white"><i class="fa fa-eye"></i></a> -->
                   <a href="<?= base_url('subkriteria/edit/' . $value['id_subkriteria']) ?>" class="bg-blue-600 hover:bg-blue-500 rounded p-2 text-white"><i class="fa fa-pen"></i></a>

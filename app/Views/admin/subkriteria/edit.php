@@ -7,10 +7,39 @@
     <div class="row">
       <div class="col-md-5 bg-emerald-100 py-3 px-3 rounded-md">
         <form action="<?= base_url('admin/update_subkriteria/' . $subkriteria['id_subkriteria']) ?>" method="post">
-          <div class="mb-4">
-            <label class="block text-emerald-400 font-medium text-base mb-2">Nama Subkriteria</label>
-            <input type="text" value="<?= $subkriteria['nama_subkriteria'] ?>" name="nama_subkriteria" class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Nama Subkriteria">
-          </div>
+        <div class="mb-4">
+              <label class="block text-emerald-400 font-medium text-base mb-2">Kriteria</label>
+              <select name="id_kriteria" id="" class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2">
+                <?php foreach($kriteria as $k ): ?>
+                  <?php if ($k['id_kriteria'] === $subkriteria['id_kriteria']) : ?>
+                     <option selected value=" <?= $k['id_kriteria'] ?>"> <?= $k['nama_kriteria'] ?> </option>
+                  <?php else : ?>
+                    <option  value=" <?= $k['id_kriteria'] ?>"> <?= $k['nama_kriteria'] ?> </option>
+                  <?php endif?>
+
+                <?php endforeach ?>
+
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-emerald-400 font-medium text-base mb-2">Range Depan Subkriteria</label>
+                    <select class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2" id="range_depan_select" name="range_depan_subkriteria"  required >
+                      <option value="<?=$subkriteria['range_depan_subkriteria']?>"><?=$subkriteria['range_depan_subkriteria']?></option>
+                      <option value=">">></option>
+                      <option value="<"><</option>
+                      <option value="nilai">Nilai</option>
+                    </select>
+            </div>
+              <div id='nilai'></div>  
+            <div class="mb-4">
+              <label class="block text-emerald-400 font-medium text-base mb-2">Range Belakang Subkriteria</label>
+                    <select class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2" id="range_belakang_select" name="range_belakang_subkriteria"  required >
+                     <option value="<?=$subkriteria['range_belakang_subkriteria']?>"><?=$subkriteria['range_belakang_subkriteria']?></option>
+                      <option value="">Tidak Ada</option>
+                      <option value="-">Ada</option>
+                    </select>
+            </div>
+            <div id='nilai2'></div> 
           <div class="mb-4">
             <label class="block text-emerald-400 font-medium text-base mb-2">Nilai Subkriteria</label>
             <input type="text" value="<?= $subkriteria['nilai_subkriteria'] ?>" name="nilai_subkriteria" id="nilai_subkriteria" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Nilai Subkriteria">
@@ -31,4 +60,58 @@
     <p class="text-emerald-600">Copyright © <?= date('Y'); ?> Yeheskiel Jitmau</p>
   </footer>
 </div>
+
+<script>
+  // Mengambil elemen select
+  var selectElementDepan = document.getElementById("range_depan_select");
+
+  // Menambahkan event listener untuk perubahan
+  selectElementDepan.addEventListener("change", function() {
+    // Mengambil nilai terpilih
+    var selectedValue = selectElementDepan.value;
+      if(selectedValue === 'nilai')
+      {
+        document.getElementById("nilai").innerHTML = `
+        <div class="mb-4">
+              <label class="block text-emerald-400 font-medium text-base mb-2">Masukan Range Depan Subkriteria</label>
+              <input type="text" name="range_depan_subkriteria" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Range Depan">
+            </div>
+            `;
+      // elsei(selectedValue === '-')
+      // {
+
+      // }
+      }else{
+        document.getElementById("nilai").innerHTML = ` `;
+      }
+   
+  });
+
+
+  // Mengambil elemen select
+  var selectElement = document.getElementById("range_belakang_select");
+
+  // Menambahkan event listener untuk perubahan
+  selectElement.addEventListener("change", function() {
+    // Mengambil nilai terpilih
+    var selectedValue = selectElement.value;
+      if(selectedValue === '-')
+      {
+        document.getElementById("nilai2").innerHTML = `
+        <div class="mb-4">
+              <label class="block text-emerald-400 font-medium text-base mb-2">Masukan Range Belakang Subkriteria</label>
+              <input type="text" name="range_belakang_subkriteria" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Range Belakang">
+            </div>
+            `;
+      // elsei(selectedValue === '-')
+      // {
+
+      // }
+      }else{
+        document.getElementById("nilai2").innerHTML = ` `;
+      }
+   
+  });
+           
+ </script>
 <?= $this->endSection(); ?>

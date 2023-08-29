@@ -427,8 +427,22 @@ class Pelanggan extends BaseController
     return view('pelanggan/smart', $data);
   }
 
+  public function hitung_smart()
+  {
+    var_dump($this->request->getPost());
+    
+  }
+
+
+
+
+
+
+
   public function cekmidtrans()
   {
   }
+
+
 
 }

@@ -13,8 +13,10 @@ class SubkriteriaModel extends Model
 
   public function get_subkriteria()
   {
-    return $this->db->table('tbl_subkriteria')->get()->getResultArray();
+    return $this->db->table('tbl_subkriteria')->select('*')->join('tbl_kriteria', 'tbl_kriteria.id_kriteria = tbl_subkriteria.id_kriteria')->get()->getResultArray();
+
   }
+
 
   public function tambah_subkriteria($data)
   {
@@ -23,7 +25,7 @@ class SubkriteriaModel extends Model
 
   public function edit_subkriteria($id_subkriteria)
   {
-    return $this->db->table('tbl_subkriteria')->where('id_subkriteria', $id_subkriteria)->get()->getRowArray();
+    return $this->db->table('tbl_subkriteria')->select('*')->join('tbl_kriteria', 'tbl_kriteria.id_kriteria = tbl_subkriteria.id_kriteria')->where('id_subkriteria', $id_subkriteria)->get()->getRowArray();
   }
 
   public function update_subkriteria($data, $id_subkriteria)

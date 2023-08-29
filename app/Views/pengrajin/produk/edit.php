@@ -30,18 +30,6 @@
           <input type="text" value="<?= $produk['harga_noken'] ?>" name="harga_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
         </div>
         <div class="mb-4">
-          <label for="ukuran" class="block font-medium mb-2 text-emerald-400">Ukuran Noken</label>
-          <input type="text" value="<?= $produk['ukuran_noken'] ?>" name="ukuran_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-        </div>
-        <div class="mb-4">
-          <label for="motif" class="block font-medium mb-2 text-emerald-400">Motif Noken</label>
-          <input type="text" value="<?= $produk['motif_noken'] ?>" name="motif_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-        </div>
-        <div class="mb-4">
-          <label for="jenis" class="block font-medium mb-2 text-emerald-400">Jenis Noken</label>
-          <input type="text" value="<?= $produk['jenis_noken'] ?>" name="jenis_noken" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
-        </div>
-        <div class="mb-4">
           <label for="pengrajin" class="block font-medium mb-2 text-emerald-400">Nama Pengrajin</label>
           <input type="text" value="<?= user()->username ?>" name="" class="border border-gray-300 px-4 py-2 w-full rounded-md shadow-md">
         </div>

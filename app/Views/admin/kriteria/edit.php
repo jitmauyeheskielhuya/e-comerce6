@@ -11,10 +11,6 @@
             <label class="block text-emerald-400 font-medium text-base mb-2">Nama Kriteria</label>
             <input type="text" value="<?= $kriteria['nama_kriteria'] ?>" name="nama_kriteria" class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Nama Kriteria">
           </div>
-          <div class="mb-4">
-            <label class="block text-emerald-400 font-medium text-base mb-2">Bobot Kriteria</label>
-            <input type="text" value="<?= $kriteria['bobot_kriteria'] ?>" name="bobot_kriteria" id="bobot_kriteria" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-md py-2 px-2" required placeholder="Bobot Kriteria">
-          </div>
           <div class="mt-6">
             <button type="submit" class="inline-flex items-center px-4 py-2 hover:bg-emerald-400 bg-emerald-500 border border-transparent rounded-md font-semibold text-slate-900 focus:focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md">
               Update

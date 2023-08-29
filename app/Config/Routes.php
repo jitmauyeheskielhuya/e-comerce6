@@ -88,6 +88,17 @@ $routes->post('pengrajin/update_produk/(:any)', 'Pengrajin::update_produk/$1', [
 $routes->get('produk/delete_produk/(:any)', 'Pengrajin::delete_produk/$1', ['filter' => 'role:pengrajin']);
 
 
+// Pengrajin/Data Produk/Kriteria
+$routes->get('produk/kriteria_produk/(:any)', 'Pengrajin::kriteria_produk/$1', ['filter' => 'role:pengrajin']);
+$routes->get('produk/tambah_kriteria_produk/(:any)', 'Pengrajin::tambah_kriteria_produk/$1', ['filter' => 'role:pengrajin']);
+$routes->post('produk/save_kriteria_produk', 'Pengrajin::save_kriteria_produk', ['filter' => 'role:pengrajin']);
+$routes->get('produk/edit_kriteria_produk/(:any)', 'Pengrajin::edit_kriteria_produk/$1', ['filter' => 'role:pengrajin']);
+$routes->post('produk/update_kriteria_produk', 'Pengrajin::update_kriteria_produk', ['filter' => 'role:pengrajin']);
+$routes->get('produk/delete_kriteria_produk/(:any)', 'Pengrajin::delete_kriteria_produk/$1', ['filter' => 'role:pengrajin']);
+
+
+
+
 
 // Pengrajin/Data Detail Produk
 $routes->get('/detail_produk', 'Pengrajin::detail_produk', ['filter' => 'role:pengrajin']);
@@ -170,6 +181,7 @@ $routes->post('pelanggan/save1', 'Pelanggan::save1', ['filter' => 'role:pelangga
 $routes->post('pelanggan/savetotal', 'Pelanggan::savetotal', ['filter' => 'role:pelanggan']);
 
 $routes->get('/pelanggan/smart', 'Pelanggan::smart', ['filter' => 'role:pelanggan']);
+$routes->post('/pelanggan/hitung_smart', 'Pelanggan::hitung_smart', ['filter' => 'role:pelanggan']);
 
 
 $routes->get('/', 'user::index');

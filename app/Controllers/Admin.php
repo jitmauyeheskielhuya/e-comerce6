@@ -6,23 +6,31 @@ use \CodeIgniter\Controller;
 use \App\Models\KriteriaModel;
 use \App\Models\SubkriteriaModel;
 use App\Controllers\BaseController;
-
+use \App\Models\UsersModel;
+use Myth\Auth\Models\UserModel;
 
 class Admin extends BaseController
 {
   protected $KriteriaModel;
   protected $SubkriteriaModel;
+  protected $userModel;
+
   public function __construct()
   {
     $this->KriteriaModel = new KriteriaModel();
     $this->SubkriteriaModel = new SubkriteriaModel();
+    $this->userModel = new UserModel();
   }
 
 
   // Dashboard
   public function index()
   {
-    return view('admin/home_admin');
+    $data = [
+      'akun_baru' => $this->userModel->countAllResults(),
+    ];
+
+    return view('admin/home_admin', $data);
   }
 
 
@@ -37,6 +45,7 @@ class Admin extends BaseController
 
   public function tambah_kriteria()
   {
+
     return view('admin/kriteria/tambah');
   }
 
@@ -44,7 +53,6 @@ class Admin extends BaseController
   {
     $data = [
       'nama_kriteria' => $this->request->getPost('nama_kriteria'),
-      'bobot_kriteria' => $this->request->getPost('bobot_kriteria'),
     ];
     $this->KriteriaModel->tambah_kriteria($data);
     session()->setFlashdata('success', 'Data Berhasil Ditambahkan');
@@ -63,7 +71,6 @@ class Admin extends BaseController
   {
     $data = [
       'nama_kriteria' => $this->request->getPost('nama_kriteria'),
-      'bobot_kriteria' => $this->request->getPost('bobot_kriteria'),
     ];
     $this->KriteriaModel->update_kriteria($data, $id_kriteria);
     session()->setFlashdata('success', 'Data Berhasil Diupdate !!!');
@@ -90,14 +97,20 @@ class Admin extends BaseController
 
   public function tambah_subkriteria()
   {
-    return view('admin/subkriteria/tambah');
+    $data = [
+      'kriteria' => $this->KriteriaModel->get_kriteria(),
+    ];
+
+    return view('admin/subkriteria/tambah', $data);
   }
 
   public function save_subkriteria()
   {
     $data = [
-      'nama_subkriteria' => $this->request->getPost('nama_subkriteria'),
+      'id_kriteria' => $this->request->getPost('id_kriteria'),
       'nilai_subkriteria' => $this->request->getPost('nilai_subkriteria'),
+      'range_depan_subkriteria' => $this->request->getPost('range_depan_subkriteria'),
+      'range_belakang_subkriteria' => $this->request->getPost('range_belakang_subkriteria'),
     ];
     $this->SubkriteriaModel->tambah_subkriteria($data);
     session()->setFlashdata('success', 'Data Berhasil Ditambahkan');
@@ -108,6 +121,7 @@ class Admin extends BaseController
   {
     $data = [
       'subkriteria' => $this->SubkriteriaModel->edit_subkriteria($id_subkriteria),
+      'kriteria' => $this->KriteriaModel->get_kriteria(),
     ];
     return view('admin/subkriteria/edit', $data);
   }
@@ -115,8 +129,10 @@ class Admin extends BaseController
   public function update_subkriteria($id_subkriteria)
   {
     $data = [
-      'nama_subkriteria' => $this->request->getPost('nama_subkriteria'),
+      'id_kriteria' => $this->request->getPost('id_kriteria'),
       'nilai_subkriteria' => $this->request->getPost('nilai_subkriteria'),
+      'range_depan_subkriteria' => $this->request->getPost('range_depan_subkriteria'),
+      'range_belakang_subkriteria' => $this->request->getPost('range_belakang_subkriteria'),
     ];
     $this->SubkriteriaModel->update_subkriteria($data, $id_subkriteria);
     session()->setFlashdata('success', 'Data Berhasil Diupdate !!!');

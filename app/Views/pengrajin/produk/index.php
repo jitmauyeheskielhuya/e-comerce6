@@ -18,26 +18,22 @@
         <table class="w-full border border-slate-900 text-center datatable table table-stripped">
           <thead>
             <tr class="bg-emerald-200 text-center">
+              <th class="py-2 px-3 border-b">No</th>
               <th class="py-2 px-3 border-b">Gambar</th>
               <th class="py-2 px-3 border-b">Harga Noken</th>
-              <th class="py-2 px-3 border-b">Ukuran Noken</th>
-              <th class="py-2 px-3 border-b">Motif Noken</th>
-              <th class="py-2 px-3 border-b">Jenis Noken</th>
-              <th class="py-2 px-3 border-b">Nama Pengrajin</th>
+              <th class="py-2 px-3 border-b">Kriteria</th>
               <th class="py-2 px-4 border-b">Aksi</th>
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($produk as $p => $value) : ?>
+            <?php  $no = 1; foreach ($produk as $p => $value) : ?>
               <tr class="bg-emerald-100">
-                <td class="py-3 px-4 border-b"><img width="20" height="20" src="/gambar_noken/<?= $value['gambar_noken'] ?>"></td>
+                <td class="py-3 px-4 border-b"><?=$no++ ?></td>
+                <td class="py-3 px-4 border-b flex justify-center"><img width="50"  src="/gambar_noken/<?= $value['gambar_noken'] ?>"></td>
                 <td class="py-3 px-4 border-b"><?= $value['harga_noken']; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['ukuran_noken']; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['motif_noken']; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['jenis_noken']; ?></td>
-                <td class="py-3 px-4 border-b"><?= $value['username']; ?></td>
+                <td class="py-3 px-4 border-b"><a href="<?= base_url('/produk/kriteria_produk/' . $value['id_produk']) ?>" class="bg-emerald-600 hover:bg-emerald-500 rounded p-1 text-white"> Lihat Kriteria <i class="fa fa-eye"></i></a></td>
                 <td class="py-2 px-2 border-b items-center">
-                  <a href="" class="bg-emerald-600 hover:bg-emerald-500 rounded p-1 text-white"><i class="fa fa-eye"></i></a>
+                  
                   <a href="<?= base_url('/produk/edit_produk/' . $value['id_produk']) ?>" class="bg-blue-600 hover:bg-blue-500 rounded p-1 text-white"><i class="fa fa-pen"></i></a>
                   <a href="<?= base_url('produk/delete_produk/' . $value['id_produk']) ?>" class="bg-red-600 hover:bg-red-500 rounded p-1 text-white" onclick="return confirm('Apakah Ingin Hapus Data..?')"><i class="fa fa-trash"></i></a>
                 </td>

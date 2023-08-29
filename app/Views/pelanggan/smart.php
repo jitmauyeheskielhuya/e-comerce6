@@ -152,24 +152,19 @@
   </header>
   <!-- header end -->
 
-
-
-  <form method="post" action="<?= site_url('pelanggan/cart'); ?>" target="_blank">
-
+  <form method="post" action="<?= site_url('pelanggan/hitung_smart'); ?>" >
     <!-- searc smart section start -->
     <section id=" home" class="pt-20 pb-16 bg-slate-100 dark:bg-slate-800">
       <div class="container pb-2">
         <div class="w-full pt-4">
           <div class="container mx-auto py-8 bg-slate-200 rounded-md shadow-md mb-16">
-            <?= form_open_multipart(base_url('pengrajin/save')); ?>
+            <?= form_open_multipart(base_url('pelanggan/hitung_smart')); ?>
             <div class="w-64 mx-auto mt-8">
               <label class="block mb-2 font-bold text-emerald-400" for="harga-noke">Harga Noke:</label>
               <select id="harga-noke" name="harga_noke" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
                 <option value="">Pilih Harga Noke</option>
                 @foreach ($hargaOptions as $option)
-                <option value="">50,000</option>
-                <option value="">50,000</option>
-                <option value="">50,000</option>
+                <option value="50,00">50,000</option>
                 @endforeach
               </select>
             </div>
@@ -179,8 +174,6 @@
               <select id="ukuran-noken" name="ukuran_noken" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
                 <option value="">Pilih Ukuran Noken</option>
                 @foreach ($ukuranOptions as $option)
-                <option value="{{ $option }}">25x10</option>
-                <option value="{{ $option }}">25x10</option>
                 <option value="{{ $option }}">25x10</option>
                 @endforeach
               </select>
@@ -198,10 +191,7 @@
                 <button type="submit" class="px-5 py-2 font-bold">Cari</button>
               </div>
             </div>
-
-
-
-            <?= form_close(); ?>
+          </form>
           </div>
         </div>
       </div>
@@ -393,109 +383,3 @@
 </html>
 <script src="<?= base_url('bootstrap') ?>/js/jquery.min.js"></script>
 <script src="<?= base_url('bootstrap') ?>/js/bootstrap.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $.ajax({
-      type: 'post',
-      url: '/pelanggan/dataprov',
-      success: function(hasil_prov) {
-        $("select[name=nama_provinsi]").html(hasil_prov);
-        // console.log(hasil);
-      }
-    });
-
-    $("select[name=nama_provinsi]").on("change", function() {
-      // ambil id_provinsi yang dipilih (dari atribut pribadi)
-      var id_provinsi_terpilih = $("option:selected", this).attr("id_provinsi");
-      // alert(id_provinsi_terpilih);
-      $.ajax({
-        type: 'post',
-        url: '/pelanggan/datadistrik',
-        data: 'id_provinsi=' + id_provinsi_terpilih,
-        success: function(hasil_distrik) {
-          // console.log(hasil_distrik);
-          $("select[name=nama_distrik]").html(hasil_distrik);
-        }
-      });
-    });
-
-    $.ajax({
-      type: 'post',
-      url: '/pelanggan/dataekspedisi',
-      success: function(hasil_ekspedisi) {
-        // console.log(hasil_ekspedisi);
-        $("select[name=nama_ekspedisi]").html(hasil_ekspedisi);
-      }
-    });
-    $("select[name=nama_ekspedisi]").on("change", function() {
-      // mendapatkan data ongkos kirim
-
-      // mendapatkan ekspedisi yang dipilih
-      var ekspedisi_terpilih = $("select[name=nama_ekspedisi").val();
-      // alert(ekspedisi_terpilih);
-      // mendapatkan id_distrik yang dipilih pengguna
-      var distrik_terpilih = $("option:selected", "select[name=nama_distrik]").attr("id_distrik");
-      // alert(distrik_terpilih);
-      // mendapatkan total_berat dari inputan
-      var total_berat = $("input[name=total_berat").val();
-      $.ajax({
-        type: 'post',
-        url: '/pelanggan/datapaket',
-        data: 'ekspedisi=' + ekspedisi_terpilih + '&distrik=' + distrik_terpilih + '&berat=' + total_berat,
-        success: function(hasil_paket) {
-          // console.log(hasil_paket);
-          $("select[name=nama_paket]").html(hasil_paket);
-
-          // letakan nama ekspedisi terpilih di input ekspedisi
-          $("input[name=ekspedisi]").val(ekspedisi_terpilih);
-        }
-      })
-    });
-
-    $("select[name=nama_distrik]").on("change", function() {
-      // ambil id_provinsi yang dipilih (dari atribut pribadi)
-      var prov = $("option:selected", this).attr("nama_provinsi");
-      var dist = $("option:selected", this).attr("nama_distrik");
-      var tipe = $("option:selected", this).attr("tipe_distrik");
-      var kodepos = $("option:selected", this).attr("kodepos");
-      // alert(provinsi_terpilih);
-
-      $("input[name=provinsi]").val(prov);
-      $("input[name=distrik]").val(dist);
-      $("input[name=tipe]").val(tipe);
-      $("input[name=kodepos]").val(kodepos);
-    });
-
-    $("select[name=nama_paket]").on("change", function() {
-      var paket = $("option:selected", this).attr("paket");
-      var ongkir = $("option:selected", this).attr("ongkir");
-      var etd = $("option:selected", this).attr("etd");
-      var harga = $("#harga").val();
-
-      var total1 = parseInt(ongkir) + parseInt(harga);
-      var total2 = formatToCurrency(Number(total1));
-      var ongkir2 = formatToCurrency(Number(ongkir));
-      $("input[name=paket]").val(paket);
-      $("input[name=ongkir]").val(ongkir2);
-      $("input[name=estimasi]").val(etd);
-      $("input[name=Totalharga]").val(total1);
-
-      $("#total").html(`<p class="font-semibold bg-emerald-500 rounded-md shadow-md px-2 py-2">Subtotal ` +
-        total2 +
-        ` IDR
-            </p>
-            
-            <div class="bg-emerald-500 hover:bg-emerald-400 px-2 py-2 rounded-md shadow-md mt-3 font-semibold">
-              <button type="submit" id="pay-button" name="snap"><i class="fa fa-credit-card mr-2"></i>CekOut</button>
-            </div>
-            
-            
-            
-            `);
-    })
-  });
-
-  function formatToCurrency(amount) {
-    return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
-  }
-</script>

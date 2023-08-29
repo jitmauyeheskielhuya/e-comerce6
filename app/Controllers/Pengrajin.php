@@ -8,6 +8,9 @@ use App\Controllers\BaseController;
 use App\Models\PembelianModel;
 use App\Models\PemesananModel;
 use App\Models\UsersModel;
+use \App\Models\KriteriaModel;
+use App\Models\ProdukKriteriaModel;
+
 
 class Pengrajin extends BaseController
 {
@@ -15,6 +18,8 @@ class Pengrajin extends BaseController
   protected $pembelianModel;
   protected $pemesananModel;
   protected $userModel;
+  protected $produkKriteriaModel;
+  protected $KriteriaModel;
   
   public function __construct()
   {
@@ -23,12 +28,19 @@ class Pengrajin extends BaseController
     $this->pembelianModel = new PembelianModel();
     $this->pemesananModel = new PemesananModel();
     $this->userModel = new UsersModel();
+    $this->produkKriteriaModel = new ProdukKriteriaModel();
+    $this->KriteriaModel = new KriteriaModel();
   }
 
   
   public function index()
   {
-    return view('pengrajin/home_pengrajin');
+    $data = [
+      'data_produk' => $this->ProdukModal->countAllResults(),
+      'data_pesanan' => $this->pemesananModel->countAllResults(),
+    ];
+
+    return view('pengrajin/home_pengrajin', $data);
   }
 
   public function produk()
@@ -125,7 +137,6 @@ class Pengrajin extends BaseController
   public function pemesanan_produk()
   {
     $data['pemesanan'] = $this->pemesananModel->getAll();
-
     return view('pengrajin/pemesanan_produk/index', $data);
   }
 
@@ -139,6 +150,85 @@ class Pengrajin extends BaseController
     $this->ProdukModal->delete_produk($id_produk);
     session()->setFlashdata('success', 'Data Berhasil Dihapus !!!');
     return redirect()->to(base_url('produk'));
+  }
+
+
+
+
+
+  // Kriteria
+  public function kriteria_produk($id_produk)
+  {
+    $data = [
+      'kriteria_produk' => $this->produkKriteriaModel->get_kriteria_produk($id_produk),
+      'produk' => $this->ProdukModal->edit_produk($id_produk),
+    ];
+    return view('pengrajin/kriteria_produk/index', $data);
+
+
+  }
+
+  public function tambah_kriteria_produk($id_produk)
+  {
+    $data = [
+      'kriteria' => $this->KriteriaModel->get_kriteria(),
+      'id_produk' => $id_produk
+    ];
+    return view('pengrajin/kriteria_produk/tambah', $data); 
+  }
+
+  public function save_kriteria_produk()
+  {
+   
+    $id = $this->request->getPost('id_produk');
+    $data = [
+      'id_kriteria' => $this->request->getPost('id_kriteria'),
+      'range_depan_kp' => $this->request->getPost('range_depan_kp'),
+      'range_belakang_kp' => $this->request->getPost('range_belakang_kp'),
+      'satuan_kp' => $this->request->getPost('satuan_kp'),
+      'id_produk' => $this->request->getPost('id_produk'),
+    ];
+    $this->produkKriteriaModel->tambah_kriteria_produk($data);
+    session()->setFlashdata('success', 'Data Berhasil Ditambahkan');
+    return redirect()->to(base_url('produk/kriteria_produk/'.$id));
+  }
+
+
+  public function edit_kriteria_produk($id_kriteria_produk)
+  {
+    $data = [
+      'kriteria' => $this->KriteriaModel->get_kriteria(),
+      'id_kriteria_produk' => $id_kriteria_produk,
+      'kriteria_produk' => $this->produkKriteriaModel->edit_kriteria_produk($id_kriteria_produk),
+    ];
+    return view('pengrajin/kriteria_produk/edit', $data); 
+  }
+
+  public function update_kriteria_produk()
+  {
+  
+    $data = [
+      'id_kriteria' => $this->request->getPost('id_kriteria'),
+      'range_depan_kp' => $this->request->getPost('range_depan_kp'),
+      'range_belakang_kp' => $this->request->getPost('range_belakang_kp'),
+      'satuan_kp' => $this->request->getPost('satuan_kp'),
+    ];
+
+    $id_kriteria_produk = $this->request->getPost('id_kriteria_produk_');
+    $id_produk = $this->request->getPost('id_produk');
+
+    $this->produkKriteriaModel->update_produk_kriteria($data, $id_kriteria_produk);
+    session()->setFlashdata('success', 'Data Berhasil Diupdate !!!');
+    return redirect()->to(base_url('produk/kriteria_produk/'.$id_produk));
+  }
+  
+  public function delete_kriteria_produk($id_kriteria_produk)
+  {
+    $data = $this->produkKriteriaModel->edit_kriteria_produk($id_kriteria_produk);
+    $id_produk = $data['id_produk'];
+    $this->produkKriteriaModel->delete_kriteria_produk($id_kriteria_produk);
+    session()->setFlashdata('success', 'Data Berhasil Dihapus !!!');
+    return redirect()->to(base_url('produk/kriteria_produk/'.$id_produk));
   }
 
   
