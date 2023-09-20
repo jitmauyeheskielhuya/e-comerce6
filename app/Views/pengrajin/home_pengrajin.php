@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-xl-3 col-sm-6 col-12 d-flex">
         <div class="card bg-comman w-100">
-          <a href="<?= base_url('/produk') ?>" class="">
+          <a href="<?= base_url('/akun') ?>" class="">
             <div class="card-body bg-teal-200 hover:bg-teal-300 rounded-md shadow-md">
               <div class="db-widgets d-flex justify-content-between align-items-center">
                 <div class="db-info">
@@ -26,7 +26,7 @@
 
       <div class="col-xl-3 col-sm-6 col-12 d-flex">
         <div class="card bg-comman w-100">
-          <a href="<?= base_url('/pemesanan_produk') ?>" class="">
+          <a href="<?= base_url('/akun') ?>" class="">
             <div class="card-body bg-teal-200 hover:bg-teal-300 rounded-md shadow-md">
               <div class="db-widgets d-flex justify-content-between align-items-center">
                 <div class="db-info">
