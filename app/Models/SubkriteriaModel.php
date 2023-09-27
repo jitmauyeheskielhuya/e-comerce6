@@ -17,6 +17,12 @@ class SubkriteriaModel extends Model
 
   }
 
+  public function get_subkriteria_saja()
+  {
+    return $this->db->table('tbl_subkriteria')->get()->getResultArray();
+
+  }
+
 
   public function tambah_subkriteria($data)
   {

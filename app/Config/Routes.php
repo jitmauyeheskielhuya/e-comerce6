@@ -181,6 +181,7 @@ $routes->post('pelanggan/save1', 'Pelanggan::save1', ['filter' => 'role:pelangga
 $routes->post('pelanggan/savetotal', 'Pelanggan::savetotal', ['filter' => 'role:pelanggan']);
 
 $routes->get('/pelanggan/smart', 'Pelanggan::smart', ['filter' => 'role:pelanggan']);
+
 $routes->post('/pelanggan/hitung_smart', 'Pelanggan::hitung_smart', ['filter' => 'role:pelanggan']);
 
 

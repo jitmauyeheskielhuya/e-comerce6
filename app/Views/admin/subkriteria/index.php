@@ -35,7 +35,7 @@
                 <td class="py-3 px-4 border-b">
                   <?php
                    echo $value['range_depan_subkriteria'];
-                  if($value['range_belakang_subkriteria'] != null && $value['range_depan_subkriteria'] != '>' && $value['range_depan_subkriteria'] != '<'  )
+                  if($value['range_belakang_subkriteria'] != null && $value['range_depan_subkriteria'] != '>' && $value['range_depan_subkriteria'] != '<' && $value['range_depan_subkriteria'] !== ''  )
                   {
                     echo '-';
                   };

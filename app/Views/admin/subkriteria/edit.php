@@ -23,8 +23,9 @@
             </div>
             <div class="mb-4">
               <label class="block text-emerald-400 font-medium text-base mb-2">Range Depan Subkriteria</label>
-                    <select class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2" id="range_depan_select" name="range_depan_subkriteria"  required >
+                    <select class="w-full border-gray-300 focus:border-indigo-500 rounded-md shadow-md py-2 px-2" id="range_depan_select" name="range_depan_subkriteria"   >
                       <option value="<?=$subkriteria['range_depan_subkriteria']?>"><?=$subkriteria['range_depan_subkriteria']?></option>
+                      <option value="">Tidak Ada</option>
                       <option value=">">></option>
                       <option value="<"><</option>
                       <option value="nilai">Nilai</option>
